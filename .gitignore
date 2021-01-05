@@ -10,6 +10,19 @@
 /[Ll]ogs/
 /[Mm]emoryCaptures/
 
+*GoogleMobileAds*
+*Plugins*
+*Library*
+*Library*
+
+*[Ll]ibrary*
+*[Tt]emp*
+*[Oo]bj*
+*[Bb]uild*
+*[Bb]uilds*
+*[Ll]ogs*
+*[Mm]emoryCaptures*
+
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta
 
@@ -58,3 +71,11 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+Producao/SubSolo-30-Segundos.mp4
+Producao/VideoCruSubSolo.mp4
+Vitor Arqueiro/aab-10-v10.symbols.zip
+Vitor Arqueiro/aab-8-v8.symbols.zip
+Vitor Arqueiro/aab-9-v9.symbols.zip
+Vitor Arqueiro/aab.aab
+Vitor Arqueiro/aab.aab
+*.zip
