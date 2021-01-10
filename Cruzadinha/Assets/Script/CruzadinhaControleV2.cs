@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class CruzadinhaControleV2 : MonoBehaviour
 {
@@ -114,7 +115,7 @@ public class CruzadinhaControleV2 : MonoBehaviour
                  }
             }
             palavrasCruzadinha.Add(palavra, palavraGameObject);
-            print(palavra);
+//            print(palavra);
             
         }
 
@@ -153,9 +154,10 @@ public class CruzadinhaControleV2 : MonoBehaviour
                     Transform pp1 = GameObject.Find("CL1").gameObject.transform;
                     GameObject letra1 =  Instantiate (GameObject.Find(item.ToUpper()));
                     letra1.gameObject.transform.localPosition = pp1.transform.position;
-                    letra1.gameObject.transform.localScale =  pp1.transform.localScale;
+                    letra1.gameObject.transform.localScale =  pp1.transform.localScale * 1.5f;
                     letra1.GetComponent<SpriteRenderer>().sortingLayerName = "Controle";
                     letra1.GetComponent<SpriteRenderer>().sortingOrder = 5;
+                    letra1.gameObject.name = "letra1";
                     GameObject.Find("CL1").SetActive(false);
                     LetrasControleTransforme.Add(letra1);
                 break; 
@@ -163,9 +165,10 @@ public class CruzadinhaControleV2 : MonoBehaviour
                     Transform pp2 = GameObject.Find("CL2").gameObject.transform;
                     GameObject letra2 =  Instantiate (GameObject.Find(item.ToUpper()));
                     letra2.gameObject.transform.localPosition = pp2.transform.position;
-                    letra2.gameObject.transform.localScale =  pp2.transform.localScale;
+                    letra2.gameObject.transform.localScale =  pp2.transform.localScale * 1.5f;
                     letra2.GetComponent<SpriteRenderer>().sortingLayerName = "Controle";
                     letra2.GetComponent<SpriteRenderer>().sortingOrder = 5;
+                    letra2.gameObject.name = "letra2";
                     GameObject.Find("CL2").SetActive(false);
                     LetrasControleTransforme.Add(letra2);
                 break; 
@@ -173,9 +176,10 @@ public class CruzadinhaControleV2 : MonoBehaviour
                     Transform pp3 = GameObject.Find("CL3").gameObject.transform;
                     GameObject letra3 =  Instantiate (GameObject.Find(item.ToUpper()));
                     letra3.gameObject.transform.localPosition = pp3.transform.position;
-                    letra3.gameObject.transform.localScale =  pp3.transform.localScale;
+                    letra3.gameObject.transform.localScale =  pp3.transform.localScale * 1.5f;
                     letra3.GetComponent<SpriteRenderer>().sortingLayerName = "Controle";
                     letra3.GetComponent<SpriteRenderer>().sortingOrder = 5;
+                    letra3.gameObject.name = "letra3";
                     GameObject.Find("CL3").SetActive(false);
                     LetrasControleTransforme.Add(letra3);
                 break; 
@@ -183,9 +187,10 @@ public class CruzadinhaControleV2 : MonoBehaviour
                     Transform pp4 = GameObject.Find("CL4").gameObject.transform;
                     GameObject letra4 =  Instantiate (GameObject.Find(item.ToUpper()));
                     letra4.gameObject.transform.localPosition = pp4.transform.position;
-                    letra4.gameObject.transform.localScale =  pp4.transform.localScale;
+                    letra4.gameObject.transform.localScale =  pp4.transform.localScale * 1.5f;
                     letra4.GetComponent<SpriteRenderer>().sortingLayerName = "Controle";
                     letra4.GetComponent<SpriteRenderer>().sortingOrder = 5;
+                    letra4.gameObject.name = "letra4";
                     GameObject.Find("CL4").SetActive(false);
                     LetrasControleTransforme.Add(letra4);
                 break; 
@@ -193,9 +198,10 @@ public class CruzadinhaControleV2 : MonoBehaviour
                     Transform pp5 = GameObject.Find("CL5").gameObject.transform;
                     GameObject letra5 =  Instantiate (GameObject.Find(item.ToUpper()));
                     letra5.gameObject.transform.localPosition = pp5.transform.position;
-                    letra5.gameObject.transform.localScale =  pp5.transform.localScale;
+                    letra5.gameObject.transform.localScale =  pp5.transform.localScale * 1.5f;
                     letra5.GetComponent<SpriteRenderer>().sortingLayerName = "Controle";
                     letra5.GetComponent<SpriteRenderer>().sortingOrder = 5;
+                    letra5.gameObject.name = "letra5";
                     GameObject.Find("CL5").SetActive(false);
                     LetrasControleTransforme.Add(letra5);
                 break; 
@@ -205,6 +211,31 @@ public class CruzadinhaControleV2 : MonoBehaviour
 
         }
         //alfabeto.SetActive(false);
+    }
+
+        public List<Vector3> lista = new List<Vector3>();
+        public List<int> listaAux = new List<int>();
+    public void embaralhar() {
+        lista = new List<Vector3>();
+        listaAux = new List<int>();
+        for (var i = 0; i < LetrasControleTransforme.Count; i++)
+        {
+            lista.Add(LetrasControleTransforme[i].transform.position);
+            listaAux.Add(i);
+
+        }
+
+        Shuffle(listaAux);
+        int linha = 0;
+        foreach (var item in listaAux)
+        {
+            //LetrasControleTransforme[linha] =  item;
+            print("Linha " + linha +" - " + LetrasControleTransforme[item].transform.position.x +" "+LetrasControleTransforme[item].transform.position.y );
+            //lista.Add(LetrasControleTransforme[item]);
+            LetrasControleTransforme[linha].transform.position = lista[item];
+            linha++;
+        }
+
     }
 
     public float convertStringParaFLoat(string numero) {
@@ -246,4 +277,91 @@ public class CruzadinhaControleV2 : MonoBehaviour
         }
         return numeroRetorno;
     } 
+
+    private static System.Random rnd = new System.Random();  
+
+    public static void Shuffle<T>(IList<T> list)  
+    {  
+        int n = list.Count;  
+        while (n > 1) {  
+            n--;  
+            int k = rnd.Next(n + 1);  
+            T value = list[k];  
+            list[k] = list[n];  
+            list[n] = value;  
+        }  
+    }
+
+    public void animacaoEMbaralhar() {
+        StartCoroutine("animacaoEMbaralharENUM");
+    }
+
+    IEnumerator animacaoEMbaralharENUM() {
+
+        //for PARA DIMINUIR AS LETRAS QUANDO FOR EMBARARLHAR
+        float init = 0.75f;
+        for (var i = 0; i < 10; i++)
+        {
+            init = init-0.05f;
+            try
+            {
+                LetrasControleTransforme[0].gameObject.transform.localScale = new Vector3(init,init,0);
+                LetrasControleTransforme[1].gameObject.transform.localScale = new Vector3(init,init,0);
+                LetrasControleTransforme[2].gameObject.transform.localScale = new Vector3(init,init,0);
+                LetrasControleTransforme[3].gameObject.transform.localScale = new Vector3(init,init,0);
+                LetrasControleTransforme[4].gameObject.transform.localScale = new Vector3(init,init,0);
+                LetrasControleTransforme[5].gameObject.transform.localScale = new Vector3(init,init,0);
+            }
+            catch (System.Exception ex)
+            {
+                 // TODO
+            }
+            yield return new WaitForSeconds(0.00000001f);
+
+        }
+
+        //for PARA EMBARARLHAR
+        lista = new List<Vector3>();
+        listaAux = new List<int>();
+        for (var i = 0; i < LetrasControleTransforme.Count; i++)
+        {
+            lista.Add(LetrasControleTransforme[i].transform.position);
+            listaAux.Add(i);
+
+        }
+
+        Shuffle(listaAux);
+        int linha = 0;
+        //for PARA TROCAR AS LETRAS DE LUGAR QUANDO FOR EMBARARLHAR
+        foreach (var item in listaAux)
+        {
+            LetrasControleTransforme[linha].transform.position = lista[item];
+            linha++;
+        }
+
+        //for PARA aumentar AS LETRAS QUANDO FOR EMBARARLHAR
+        init = 0.0f;
+        for (var i = 0; i < 10; i++)
+        {
+            init = init+0.075f;
+            try
+            {
+                LetrasControleTransforme[0].gameObject.transform.localScale = new Vector3(init,init,0);
+                LetrasControleTransforme[1].gameObject.transform.localScale = new Vector3(init,init,0);
+                LetrasControleTransforme[2].gameObject.transform.localScale = new Vector3(init,init,0);
+                LetrasControleTransforme[3].gameObject.transform.localScale = new Vector3(init,init,0);
+                LetrasControleTransforme[4].gameObject.transform.localScale = new Vector3(init,init,0);
+                LetrasControleTransforme[5].gameObject.transform.localScale = new Vector3(init,init,0);
+            }
+            catch (System.Exception ex)
+            {
+                 // TODO
+            }
+            yield return new WaitForSeconds(0.00000001f);
+
+        }
+    }
+
+    
 }
+

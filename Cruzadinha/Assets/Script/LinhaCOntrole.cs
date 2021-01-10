@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class LinhaCOntrole : MonoBehaviour
 {
@@ -13,17 +14,8 @@ public class LinhaCOntrole : MonoBehaviour
     public Color c2 = Color.red;
     public int lengthOfLineRenderer = 2;
 
-
-    //efeito quando arrasta pega aumenta.
-    float x;
-    float y;
-    //float z;
-    float xN;
-    float yN;
-
-    public Vector3 posicaoIniciao;
-    public Vector3 posicaoAtual;
-    public Vector3 teste1;
+    Vector3 posicaoIniciao;
+    Vector3 posicaoAtual;
 
     public int cordecadasLetras = 0;
     public int qtdLetrasEscolhidas = 1;
@@ -36,7 +28,23 @@ public class LinhaCOntrole : MonoBehaviour
     public List<GameObject> letrasPalavraDestroir = new List<GameObject>();
     public List<GameObject> letrasFormarPalavra = new List<GameObject>();
     CruzadinhaControleV2 cruzadinhaControleV2;
-    //public GameObject colisor;
+
+    //SHAKE CAMERA
+    public CinemachineVirtualCamera VirtualCamera;
+    private CinemachineBasicMultiChannelPerlin virtualCameraNoise;
+    public float ShakeDuration = 0.3f;          // Time the Camera Shake effect will last
+    public float ShakeAmplitude = 3.2f;         // Cinemachine Noise Profile Parameter
+    public float ShakeFrequency = 3.0f;         // Cinemachine Noise Profile Parameter
+
+    public float ShakeElapsedTime = 0f;
+
+    private GameObject cardCompletou;
+    private GameObject bom;
+    private GameObject otimo;
+    private GameObject bravo;
+    private GameObject perfeito;
+    private GameObject parabens;
+    
     void Start()
     {
         //colisor = GameObject.Find("colisorLetras");
@@ -57,14 +65,27 @@ public class LinhaCOntrole : MonoBehaviour
         lineRenderer.colorGradient = gradient;
         coroutine = waith();
         StartCoroutine("waith");
-        x = transform.localScale.x;
-        y = transform.localScale.y;
-        //z = transform.localScale.z;
-
-        xN = x * 2f;
-        yN = y * 2f;
 
         cruzadinhaControleV2 = FindObjectOfType(typeof(CruzadinhaControleV2)) as CruzadinhaControleV2;
+
+        // Get Virtual Camera Noise Profile
+        if (VirtualCamera != null){
+            virtualCameraNoise = VirtualCamera.GetCinemachineComponent<Cinemachine.CinemachineBasicMultiChannelPerlin>(); 
+        }
+
+        cardCompletou = GameObject.Find("cardCompletou");
+        bom = GameObject.Find("Bom");
+        otimo = GameObject.Find("Otimo");
+        bravo = GameObject.Find("Bravo");
+        perfeito = GameObject.Find("perfeito");
+        parabens = GameObject.Find("parabens");
+        bom.SetActive(false);
+        otimo.SetActive(false);
+        bravo.SetActive(false);
+        perfeito.SetActive(false);
+        parabens.SetActive(false);
+        cardCompletou.SetActive(false);
+
         
     }
     //esta se perdendo na hora de guarda posição inicial, com esse metodo aguarda definir para depois guardar.
@@ -80,6 +101,7 @@ public class LinhaCOntrole : MonoBehaviour
 
     void Update()
     {
+         cameraShake();
         //if (Input.touchCount > 0 && !locked) //SEM SIMULADOR
         //if ()
         //{
@@ -94,8 +116,13 @@ public class LinhaCOntrole : MonoBehaviour
                 this.GetComponent<Renderer>().sortingOrder = 10;
                 transform.localScale = new Vector2(x, y);
             } */
+            Touch touch = simulatess();
+            if (Application.platform == RuntimePlatform.Android) {
+                touch = simulatess();//Input.GetTouch(0); SEM SIMULADOR
+            } else if (Application.platform == RuntimePlatform.OSXEditor) {
+                Input.GetTouch(0); 
+            }
             //Touch touch = Input.GetTouch(0);//simulatess();//Input.GetTouch(0); SEM SIMULADOR
-            Touch touch = simulatess();//Input.GetTouch(0); SEM SIMULADOR
 
             //Vector2 touchPos = Camera.main.ScreenToWorldPoint(touch.position);
             LineRenderer lineRenderer = GetComponent<LineRenderer>();
@@ -185,15 +212,12 @@ public class LinhaCOntrole : MonoBehaviour
         //pegar item 
         if(cruzadinhaControleV2.palavrasCruzadinha.TryGetValue(palavraMontada, out palavraGameObjects)) {
             
-            //print(palavraGameObject);
-            //percorrer places para instanciar novas letras, nas mesma posiçoes
-            foreach (var item in palavraGameObjects)
-            {
-                print(item.GetComponent<Place>().letraPace);
-                GameObject letra1 =  Instantiate (GameObject.Find(item.GetComponent<Place>().letraPace));
-                letra1.gameObject.transform.localPosition = item.transform.position;
-                letra1.gameObject.transform.localScale =  item.transform.localScale;
-            }
+            cameraShake();
+
+            //chama animação de mostrar palavras prontras
+            coroutine = animacaoAcertouENUM(palavraGameObjects);
+            StartCoroutine(coroutine);
+
             //apaga as linhas por que acertou a palavras
             LineRenderer lineRenderer = GetComponent<LineRenderer>();
             lineRenderer.enabled = false;
@@ -201,26 +225,90 @@ public class LinhaCOntrole : MonoBehaviour
             //remover palavra da lista
             cruzadinhaControleV2.palavrasCruzadinha.Remove(palavraMontada);
             
-            //limpar palavra montada
-            palavraMontada = null;
+        }
+    }
+
+    IEnumerator animacaoAcertouENUM(List<GameObject> palavraGameObjects) {
+        //quando completa a palavra, apresenta bom ou otimo ou bravo ou parabens
+        int rand = Random.Range(2,8);
+        GameObject obj = bom;
+        if(rand < 4 ){
+            obj = bom;
+        } else if (rand == 5){
+            obj = otimo;
+        } else if (rand == 6){
+            obj = bravo;
+        } else if (rand == 7){
+            obj = perfeito;
+        } else if (rand == 8){
+            obj = parabens;
+        }
+        obj.SetActive(true);
+         //percorrer places para instanciar novas letras, nas mesma posiçoes
+        foreach (var item in palavraGameObjects)
+        {
+            GameObject efeito =  Instantiate (GameObject.Find("EfeitoAmarelo"));
+            efeito.gameObject.transform.localPosition = item.transform.position;
+            yield return new WaitForSeconds(0.4f);
+            GameObject letra1 =  Instantiate (GameObject.Find(item.GetComponent<Place>().letraPace));
+            letra1.gameObject.transform.localPosition = item.transform.position;
+            letra1.gameObject.transform.localScale =  item.transform.localScale;
+            letra1.GetComponent<SpriteRenderer>().sortingOrder = 1;
+            yield return new WaitForSeconds(0.1f);
+            Destroy(efeito);
         }
 
+        if(cruzadinhaControleV2.palavrasCruzadinha.Count == 0){
 
-        /*
-        foreach (var pa in cruzadinhaControleV2.palavrasCruzadinha)
-        {
-            //(List<Dictionary<string, GameObject>>) pa.
-        }
-        foreach (Objeto item in cruzadinhaControleV2.objetos)
-        {
-            if(palavraMontada == item.nome) {
-                print("acertouPlavra");
-                LineRenderer lineRenderer = GetComponent<LineRenderer>();
-                lineRenderer.enabled = false;
+            try
+            {
                 
-            }
-        }*/
+                GameObject go1 = GameObject.Find("letra1");
+                GameObject efeito1 =  Instantiate (GameObject.Find("Explosao"));
+                efeito1.gameObject.transform.position = go1.gameObject.transform.position;
+                Destroy(go1);
 
+                GameObject go2 = GameObject.Find("letra2");
+                GameObject efeito2 =  Instantiate (GameObject.Find("Explosao"));
+                efeito2.gameObject.transform.position = go2.gameObject.transform.position;
+                Destroy(go2);
+
+                GameObject go3 = GameObject.Find("letra3");
+                GameObject efeito3 =  Instantiate (GameObject.Find("Explosao"));
+                efeito3.gameObject.transform.position = go3.gameObject.transform.position;
+                Destroy(go3);
+
+                GameObject go4 = GameObject.Find("letra4");
+                GameObject efeito4 =  Instantiate (GameObject.Find("Explosao"));
+                efeito4.gameObject.transform.position = go4.gameObject.transform.position;
+                Destroy(go4);
+
+                GameObject go5 = GameObject.Find("letra5");
+                GameObject efeito5 =  Instantiate (GameObject.Find("Explosao"));
+                efeito5.gameObject.transform.position = go5.gameObject.transform.position;
+                Destroy(go5);
+
+                GameObject go6 = GameObject.Find("letra6");
+                GameObject efeito6 =  Instantiate (GameObject.Find("Explosao"));
+                efeito6.gameObject.transform.position = go6.gameObject.transform.position;
+                Destroy(go6);
+
+                GameObject go7 = GameObject.Find("letra7");
+                GameObject efeito7 =  Instantiate (GameObject.Find("Explosao"));
+                efeito7.gameObject.transform.position = go7.gameObject.transform.position;
+                Destroy(go7);
+            }
+            catch (System.Exception ex)
+            {
+                 // TODO
+            }
+
+            cardCompletou.SetActive(true);
+
+        }
+        palavraMontada = null;
+        yield return new WaitForSeconds(1f);
+        obj.SetActive(false);
     }
     public void limpaPalavraMontada() {
         foreach (var item in letrasPalavraDestroir)
@@ -272,31 +360,31 @@ public class LinhaCOntrole : MonoBehaviour
             case 1:
                     GameObject letra1 =  Instantiate (GameObject.Find(letra.GetComponent<Place>().letraPace));
                     letra1.gameObject.transform.localPosition = GameObject.Find("Letra1").transform.position;
-                    letra1.gameObject.transform.localScale =  GameObject.Find("Letra1").transform.localScale;
+                    letra1.gameObject.transform.localScale =  GameObject.Find("Letra1").transform.localScale * 0.5f;
                     letrasPalavraDestroir.Add(letra1);
                 break;
             case 2:
                     GameObject letra2 =  Instantiate (GameObject.Find(letra.GetComponent<Place>().letraPace));
                     letra2.gameObject.transform.localPosition = GameObject.Find("Letra2").transform.position;
-                    letra2.gameObject.transform.localScale =  GameObject.Find("Letra2").transform.localScale;
+                    letra2.gameObject.transform.localScale =  GameObject.Find("Letra2").transform.localScale * 0.5f;
                     letrasPalavraDestroir.Add(letra2);
                 break;
             case 3:
                     GameObject letra3 =  Instantiate (GameObject.Find(letra.GetComponent<Place>().letraPace));
                     letra3.gameObject.transform.localPosition = GameObject.Find("Letra3").transform.position;
-                    letra3.gameObject.transform.localScale =  GameObject.Find("Letra3").transform.localScale;
+                    letra3.gameObject.transform.localScale =  GameObject.Find("Letra3").transform.localScale * 0.5f;
                     letrasPalavraDestroir.Add(letra3);
                 break;
             case 4:
                     GameObject letra4 =  Instantiate (GameObject.Find(letra.GetComponent<Place>().letraPace));
                     letra4.gameObject.transform.localPosition = GameObject.Find("Letra4").transform.position;
-                    letra4.gameObject.transform.localScale =  GameObject.Find("Letra4").transform.localScale;
+                    letra4.gameObject.transform.localScale =  GameObject.Find("Letra4").transform.localScale * 0.5f;
                     letrasPalavraDestroir.Add(letra4);
                 break;
             case 5:
                     GameObject letra5 =  Instantiate (GameObject.Find(letra.GetComponent<Place>().letraPace));
                     letra5.gameObject.transform.localPosition = GameObject.Find("Letra5").transform.position;
-                    letra5.gameObject.transform.localScale =  GameObject.Find("Letra5").transform.localScale;
+                    letra5.gameObject.transform.localScale =  GameObject.Find("Letra5").transform.localScale * 0.5f;
                     letrasPalavraDestroir.Add(letra5);
                 break;
             default:
@@ -305,28 +393,9 @@ public class LinhaCOntrole : MonoBehaviour
         
     }
     void OnTriggerEnter2D(Collider2D collision2d) {
-        Transform place = collision2d.gameObject.transform;
         switch (collision2d.gameObject.tag)
         {
             case "Place":
-
-                if ((Mathf.Abs(transform.position.x - place.position.x) <= 1.0f &&
-                       Mathf.Abs(transform.position.y - place.position.y) <= 1.0f))
-                    {
-//                        print("OPAAAAAAA");
-//                        proximaLetra = true;
-                        //print("ENCAIXANDOOOOO");
-
-                        //transform.position = new Vector3(place.position.x, place.position.y, 0);
-
-                        //transform.localScale = new Vector3(x, y, 0);
-
-                    }
-                //Debug.Log(collision2d.gameObject.GetComponent<Place>().letraPace);
-                //if(collision2d.gameObject.GetComponent<Place>().letraPace == letraMove ){
-                    //letraPlace = collision2d.gameObject;
-                //}
-                //collision2d.gameObject.SendMessage("removeInteracao", SendMessageOptions.DontRequireReceiver);
                 break;
             default:
             {
@@ -337,20 +406,37 @@ public class LinhaCOntrole : MonoBehaviour
     }
 
     void OnTriggerExit2D(Collider2D collision2d) {
-        //Debug.Log(collision2d.gameObject.tag);
          switch (collision2d.gameObject.tag)
         {
             case "Place":
-                //if(collision2d.gameObject.GetComponent<Place>().letraPace == letraMove ){
-                //    letraPlace = null;
-               // }
-                //collision2d.gameObject.SendMessage("removeInteracao", SendMessageOptions.DontRequireReceiver);
                 break;
             default:
             {
                 break;
             }
             
+        }
+    }
+    public void cameraShake() {
+         // If the Cinemachine componet is not set, avoid update
+        if (VirtualCamera != null && virtualCameraNoise != null)
+        {
+            // If Camera Shake effect is still playing
+            if (ShakeElapsedTime > 0)
+            {
+                // Set Cinemachine Camera Noise parameters
+                virtualCameraNoise.m_AmplitudeGain = ShakeAmplitude;
+                virtualCameraNoise.m_FrequencyGain = ShakeFrequency;
+
+                // Update Shake Timer
+                ShakeElapsedTime -= Time.deltaTime;
+            }
+            else
+            {
+                // If Camera Shake effect is over, reset variables
+                virtualCameraNoise.m_AmplitudeGain = 0f;
+                ShakeElapsedTime = 0f;
+            }
         }
     }
 }

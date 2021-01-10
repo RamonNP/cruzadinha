@@ -1,0 +1,483 @@
+fileFormatVersion: 2
+guid: 7595883cce7ee9446b984cce6a1a8b83
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2456291901230916678
+    second: completou_perdeu_bonus_0
+  - first:
+      213: 2682326010973160836
+    second: completou_perdeu_bonus_1
+  - first:
+      213: -6898542049912613794
+    second: completou_perdeu_bonus_2
+  - first:
+      213: -3024980690546174990
+    second: completou_perdeu_bonus_3
+  - first:
+      213: -3462190983270007143
+    second: completou_perdeu_bonus_4
+  - first:
+      213: 5257303980415951916
+    second: completou_perdeu_bonus_5
+  - first:
+      213: 4912044134380627061
+    second: completou_perdeu_bonus_6
+  - first:
+      213: -4674948647552026404
+    second: completou_perdeu_bonus_7
+  - first:
+      213: -4670581917176055647
+    second: completou_perdeu_bonus_8
+  - first:
+      213: -4530811946393469037
+    second: completou_perdeu_bonus_9
+  - first:
+      213: 3603204986910183179
+    second: completou_perdeu_bonus_10
+  - first:
+      213: -6977664530316705131
+    second: completou_perdeu_bonus_11
+  - first:
+      213: -2350722120116687313
+    second: completou_perdeu_bonus_12
+  - first:
+      213: 18601385063209116
+    second: completou_perdeu_bonus_13
+  - first:
+      213: 283723280454206800
+    second: completou_perdeu_bonus_14
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: completou_perdeu_bonus_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 505
+        width: 216
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8db39b5fcb5d0b438b2a36a3fd54ab3
+      internalID: -2456291901230916678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: completou_perdeu_bonus_1
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 528
+        width: 232
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecd2225fb52923242bb7739c03b2ad70
+      internalID: 2682326010973160836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: completou_perdeu_bonus_2
+      rect:
+        serializedVersion: 2
+        x: 883
+        y: 534
+        width: 329
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a60b6070d0186840af075b3a66a7764
+      internalID: -6898542049912613794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: completou_perdeu_bonus_3
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 380
+        width: 210
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6eedfa37c7cbe2c4c93717cbec1f8233
+      internalID: -3024980690546174990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: completou_perdeu_bonus_4
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 404
+        width: 226
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 829237db20fa9a34e8d96f7f6ccb5d26
+      internalID: -3462190983270007143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: completou_perdeu_bonus_5
+      rect:
+        serializedVersion: 2
+        x: 886
+        y: 410
+        width: 322
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e8b5d2a19bf3f242bf79190a968b2b5
+      internalID: 5257303980415951916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: completou_perdeu_bonus_6
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 232
+        width: 213
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c2ea73dfb6686a469754cd422046f5a
+      internalID: 4912044134380627061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: completou_perdeu_bonus_7
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 256
+        width: 229
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 662a6eb95db0ef64484f63417fbc574b
+      internalID: -4674948647552026404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: completou_perdeu_bonus_8
+      rect:
+        serializedVersion: 2
+        x: 901
+        y: 262
+        width: 325
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9568414bff41d03429f6fbdabc709259
+      internalID: -4670581917176055647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: completou_perdeu_bonus_9
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 117
+        width: 206
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c193aad9ee040045867b28cf8bd48e7
+      internalID: -4530811946393469037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: completou_perdeu_bonus_10
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 140
+        width: 221
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6e9c896a3496ab4aa4508b6c547b98a
+      internalID: 3603204986910183179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: completou_perdeu_bonus_11
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 147
+        width: 318
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7d73c33d33658f4198ec9c0c91424bb
+      internalID: -6977664530316705131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: completou_perdeu_bonus_12
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 11
+        width: 209
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b22de9b88b8f574a8458ba44623a6fb
+      internalID: -2350722120116687313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: completou_perdeu_bonus_13
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 35
+        width: 225
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 279d697d134081d4d9a9218a6bb8bbae
+      internalID: 18601385063209116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: completou_perdeu_bonus_14
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 40
+        width: 322
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 003e60938bbf7b7459914f25e26aceb4
+      internalID: 283723280454206800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 057bd43b47a41c7449b6e97f3a875cc3
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

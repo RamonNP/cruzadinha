@@ -1,0 +1,603 @@
+fileFormatVersion: 2
+guid: f2d2e2010096b9647b93231638d71902
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7668202415641316576
+    second: Parabens_0
+  - first:
+      213: 8644606166036175579
+    second: Parabens_1
+  - first:
+      213: 3934149971593721490
+    second: Parabens_2
+  - first:
+      213: 5093629749314351843
+    second: Parabens_3
+  - first:
+      213: 4181525523040359545
+    second: Parabens_4
+  - first:
+      213: -2246316620571076949
+    second: Parabens_5
+  - first:
+      213: 1290208847701352688
+    second: Parabens_6
+  - first:
+      213: 8092135539446064780
+    second: Parabens_7
+  - first:
+      213: -5474180900707349711
+    second: Parabens_8
+  - first:
+      213: -3735800550852922354
+    second: Parabens_9
+  - first:
+      213: 7501453325093026452
+    second: Parabens_10
+  - first:
+      213: -3190442346489358099
+    second: Parabens_11
+  - first:
+      213: -8958458661705143403
+    second: Parabens_12
+  - first:
+      213: 6672840914778662206
+    second: Parabens_13
+  - first:
+      213: 6066692950147050651
+    second: Parabens_14
+  - first:
+      213: 5616927723012367595
+    second: Parabens_15
+  - first:
+      213: 756022886769150846
+    second: Parabens_16
+  - first:
+      213: 6702229156169692168
+    second: Parabens_17
+  - first:
+      213: 7171947736394876666
+    second: Parabens_18
+  - first:
+      213: -4286184726428914543
+    second: Parabens_19
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Parabens_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 506
+        width: 216
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dffa2e8cdaf30ec488c4bf850d9df5cf
+      internalID: -7668202415641316576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Parabens_1
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 521
+        width: 301
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe3e8bd19c4cd2444805e5d21859d14c
+      internalID: 8644606166036175579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Parabens_2
+      rect:
+        serializedVersion: 2
+        x: 637
+        y: 527
+        width: 217
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 765ecf33a4e5cc24fadc0badbb321c85
+      internalID: 3934149971593721490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Parabens_3
+      rect:
+        serializedVersion: 2
+        x: 907
+        y: 531
+        width: 280
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80de5e1e29f2f5748bcf49b1a07fdf4e
+      internalID: 5093629749314351843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Parabens_4
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 382
+        width: 211
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1bd7050ead1e1840a30bc42e8d529d0
+      internalID: 4181525523040359545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Parabens_5
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 397
+        width: 296
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff8db5481638022428e8d99a73ca5505
+      internalID: -2246316620571076949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Parabens_6
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 402
+        width: 210
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a62126e6e65cbb34f985f89315bfcd09
+      internalID: 1290208847701352688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Parabens_7
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 407
+        width: 274
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09058b659611ad14ca8a8e0eabfb0a53
+      internalID: 8092135539446064780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Parabens_8
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 234
+        width: 214
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc79e58e2e3957c42b7e88310a9803bd
+      internalID: -5474180900707349711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Parabens_9
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 248
+        width: 298
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4928a789694a8d439be269c6c16eed8
+      internalID: -3735800550852922354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Parabens_10
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 254
+        width: 214
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebe2342b6ed9ea548acf6090b0f0765a
+      internalID: 7501453325093026452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Parabens_11
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 259
+        width: 277
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c01c6bdaed31334c9b9f05ad85b6e57
+      internalID: -3190442346489358099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Parabens_12
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 119
+        width: 206
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c90d92e71e4295742b700574c8105e88
+      internalID: -8958458661705143403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Parabens_13
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 133
+        width: 290
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c742f4a1b3a4a248a943f0689d3c1fa
+      internalID: 6672840914778662206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Parabens_14
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 138
+        width: 207
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0887fb5059e2b84bad6e73ac3477bc6
+      internalID: 6066692950147050651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Parabens_15
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 144
+        width: 269
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18ea0a63922710a448647154c3614782
+      internalID: 5616927723012367595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Parabens_16
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 12
+        width: 209
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9605d76945ddb9747a2f15aa339c7257
+      internalID: 756022886769150846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Parabens_17
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 28
+        width: 294
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cfcbf5660bb47646a4f93ce6d9ef7a9
+      internalID: 6702229156169692168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Parabens_18
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 33
+        width: 210
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94791e2ad921e9b4bb9182f75b4eb54b
+      internalID: 7171947736394876666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Parabens_19
+      rect:
+        serializedVersion: 2
+        x: 942
+        y: 38
+        width: 273
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8be7e075c7ab00c468c4b701eff73081
+      internalID: -4286184726428914543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: a96ceb817eb84c944b68ca00503e6e1d
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

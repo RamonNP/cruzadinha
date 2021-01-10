@@ -1721,6 +1721,9 @@ MonoBehaviour:
   sFX: {fileID: 1679059239}
   musicFase1: {fileID: 8300000, guid: 8d6d37c308d99c74da6fbf0e7b09b6f2, type: 3}
   musicMenu: {fileID: 8300000, guid: 0351ea1ea15c86a4e89647e678f1f704, type: 3}
+  fxCombo1: {fileID: 8300000, guid: 59425fdb4ef42bd4a85f3ad9202a54ca, type: 3}
+  fxCombo2: {fileID: 8300000, guid: 3ed45cf6f23c4bd4faeb4b183d8d0d16, type: 3}
+  fxCombo3: {fileID: 8300000, guid: f464d9d5fb5d0b54f80dd281072199f0, type: 3}
   fxClick: {fileID: 8300000, guid: 6c7cf34fba55573438cc06b39d9366be, type: 3}
   fxPalavra: {fileID: 0}
   fxError: {fileID: 8300000, guid: dbb31d0b31c748440a9b6503e28668da, type: 3}

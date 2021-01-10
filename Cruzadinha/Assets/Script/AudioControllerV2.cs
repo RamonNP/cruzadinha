@@ -35,6 +35,9 @@ public class AudioControllerV2 : MonoBehaviour
 
     [Header("Sound")]
 
+    public AudioClip fxCombo1;
+    public AudioClip fxCombo2;
+    public AudioClip fxCombo3;
     public AudioClip fxClick;
     public AudioClip fxPalavra;
     public AudioClip fxError;
