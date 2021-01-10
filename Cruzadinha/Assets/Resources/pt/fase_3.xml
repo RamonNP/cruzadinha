@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<palavras>
+		<palavra name="palavra1">
+			<nome>FILE</nome>
+			<pontos>2</pontos>
+			<inicio>-0</inicio>
+			<vertical>S</vertical>
+			<pular>
+				<casa></casa>
+			</pular>
+			<letra>
+				<value>F</value>
+				<value>L</value>
+				<value>I</value>
+				<value>E</value>
+			</letra>
+		</palavra>
+		<palavra name="palavra2">
+			<nome>FEL</nome>
+			<pontos>-0.5</pontos>
+			<vertical>N</vertical>
+			<inicio>0.5</inicio>
+			<pular>
+				<casa></casa>
+			</pular>
+		</palavra>
+		<palavra name="palavra3">
+			<nome>LEI</nome>
+			<pontos>0.5</pontos>
+			<inicio>0.5</inicio>
+			<vertical>S</vertical>
+			<pular>
+				<casa></casa>
+			</pular>
+		</palavra>
+		<palavra name="palavra4">
+			<nome>FIEL</nome>
+			<pontos>-0</pontos>
+			<inicio>-0.5</inicio>
+			<vertical>N</vertical>
+			<pular>
+				<casa></casa>
+			</pular>
+		</palavra>
+	</palavras>

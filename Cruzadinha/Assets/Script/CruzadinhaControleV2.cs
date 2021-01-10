@@ -2,35 +2,42 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.SceneManagement;
 
 public class CruzadinhaControleV2 : MonoBehaviour
 {
+    private AudioControllerV2 _audioControllerV2;
     private GameController gameController;
     public GameObject alfabeto;
     private LerXml xmlLerDados;
     public List<GameObject> LetrasControleTransforme = new List<GameObject>() ;
     public List<Objeto> objetos;
     public Dictionary<string,List<GameObject>> palavrasCruzadinha = new Dictionary<string,List<GameObject>>();
-    
 
 
     // Start is called before the first frame update
     void Start()
     {
         gameController = FindObjectOfType(typeof(GameController)) as GameController;
+        _audioControllerV2 = FindObjectOfType(typeof(AudioControllerV2)) as AudioControllerV2;
         //if(xmlLerDados !=null){
             //xmlLerDados.LoadDialogoData(gameController.idiomaFolder[gameController.idioma] + "/" + gameController.nomeArquivoXml); //ler o arquivo interação com itens;
         //}
         //Debug.Log("INICIO CARREGANDO");
         xmlLerDados = LerXml.getInstance();
-        //Debug.Log("INSTANCIADO");
-        objetos = xmlLerDados.LoadDialogoData("fases");
-        //Debug.Log("FIM CARREGANDO");
+        PlayerPrefs.SetInt("faseAtual",1);
+        if(PlayerPrefs.GetInt("faseAtual") == 0) {
+            objetos = xmlLerDados.LoadDialogoData(_audioControllerV2.idioma+"/fase_1");
+            PlayerPrefs.SetInt("faseAtual",1);
+        } else {
+            string fase = "/fase_"+PlayerPrefs.GetInt("faseAtual").ToString();
+            objetos = xmlLerDados.LoadDialogoData(_audioControllerV2.idioma+fase);
+        }
         preencherPlace();
     }
 
     // Update is called once per frame
-    void Update()
+    void Update()       
     {
         
     }
@@ -293,6 +300,7 @@ public class CruzadinhaControleV2 : MonoBehaviour
     }
 
     public void animacaoEMbaralhar() {
+        CameraShake._instance.ShakeCamera(5f, 0.05f);
         StartCoroutine("animacaoEMbaralharENUM");
     }
 
@@ -362,6 +370,9 @@ public class CruzadinhaControleV2 : MonoBehaviour
         }
     }
 
-    
+    public void proximaFase() {
+        PlayerPrefs.SetInt("faseAtual",PlayerPrefs.GetInt("faseAtual")+1);
+        SceneManager.LoadScene("Fase1");
+    }
 }
 

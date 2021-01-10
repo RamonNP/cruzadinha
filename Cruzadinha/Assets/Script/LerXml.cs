@@ -39,6 +39,7 @@ public class LerXml : MonoBehaviour
     {
         List<Objeto> list = new List<Objeto>();
         TextAsset xmlData = Resources.Load<TextAsset>(caminho);
+        print(caminho);
         XmlDocument XmlDocument = new XmlDocument();
         XmlDocument.LoadXml(xmlData.text);
         foreach(XmlNode item in XmlDocument["palavras"].ChildNodes)

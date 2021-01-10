@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class AudioControllerV2 : MonoBehaviour
 {
 
+    public string idioma = "pt";
     public AudioControllerV2 instance;
     public float tempoInciarPalavra;
     private void Awake()
@@ -81,29 +82,6 @@ public class AudioControllerV2 : MonoBehaviour
         coroutine = changeMusicEnum();
         StartCoroutine("changeMusicEnum");
     }
-    /*
-    private IEnumerator changeMusicEnum()
-    {
-        for (float volume = maxVol; volume >= 0; volume -= 0.1f)
-        {
-            yield return new WaitForSecondsRealtime(0.1f);
-            sMusic.volume = volume;
-        }
-        sMusic.volume = 0;
-        sMusic.clip = newMusic;
-        sMusic.Play();
-
-        for (float volume = 0; volume < maxVol; volume += 0.1f)
-        {
-            yield return new WaitForSecondsRealtime(0.1f);
-            sMusic.volume = volume;
-        }
-        sMusic.volume = maxVol;
-        if (changeScene)
-        {
-            SceneManager.LoadScene(newScene);
-        }
-    }*/
 
 
     IEnumerator changeMusicEnum()

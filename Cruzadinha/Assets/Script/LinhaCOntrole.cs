@@ -44,6 +44,8 @@ public class LinhaCOntrole : MonoBehaviour
     private GameObject bravo;
     private GameObject perfeito;
     private GameObject parabens;
+
+    private bool ternimouFase = false;
     
     void Start()
     {
@@ -85,6 +87,7 @@ public class LinhaCOntrole : MonoBehaviour
         perfeito.SetActive(false);
         parabens.SetActive(false);
         cardCompletou.SetActive(false);
+        ternimouFase = false;
 
         
     }
@@ -101,21 +104,7 @@ public class LinhaCOntrole : MonoBehaviour
 
     void Update()
     {
-         cameraShake();
-        //if (Input.touchCount > 0 && !locked) //SEM SIMULADOR
-        //if ()
-        //{
-        //Debug.Log("Opaaa");
-            /*
-            if (transform.position.x != initialPosition.x && initialPosition.y != transform.position.y)
-            {
-                transform.localScale = new Vector3(xN, yN);
-                this.GetComponent<SpriteRenderer>().sortingOrder = 11;
-            } else
-            {
-                this.GetComponent<Renderer>().sortingOrder = 10;
-                transform.localScale = new Vector2(x, y);
-            } */
+        if(!ternimouFase){
             Touch touch = simulatess();
             if (Application.platform == RuntimePlatform.Android) {
                 touch = simulatess();//Input.GetTouch(0); SEM SIMULADOR
@@ -200,19 +189,16 @@ public class LinhaCOntrole : MonoBehaviour
                     break;
 
             }
-       // } else //adicionado para sempre mater a posição inicial atualizada. 
-       // {
-       //     initialPosition = transform.position;
-       // }
+        }
+
     }
     private void acertouPalavra(string letra) {
         palavraMontada  = palavraMontada + letra;
         List<GameObject> palavraGameObjects = null;
-
+        
         //pegar item 
         if(cruzadinhaControleV2.palavrasCruzadinha.TryGetValue(palavraMontada, out palavraGameObjects)) {
             
-            cameraShake();
 
             //chama animação de mostrar palavras prontras
             coroutine = animacaoAcertouENUM(palavraGameObjects);
@@ -250,6 +236,7 @@ public class LinhaCOntrole : MonoBehaviour
             GameObject efeito =  Instantiate (GameObject.Find("EfeitoAmarelo"));
             efeito.gameObject.transform.localPosition = item.transform.position;
             yield return new WaitForSeconds(0.4f);
+            CameraShake._instance.ShakeCamera(5f, 0.01f);
             GameObject letra1 =  Instantiate (GameObject.Find(item.GetComponent<Place>().letraPace));
             letra1.gameObject.transform.localPosition = item.transform.position;
             letra1.gameObject.transform.localScale =  item.transform.localScale;
@@ -262,7 +249,8 @@ public class LinhaCOntrole : MonoBehaviour
 
             try
             {
-                
+                ternimouFase = true;
+                CameraShake._instance.ShakeCamera(5f, 0.05f);
                 GameObject go1 = GameObject.Find("letra1");
                 GameObject efeito1 =  Instantiate (GameObject.Find("Explosao"));
                 efeito1.gameObject.transform.position = go1.gameObject.transform.position;
@@ -417,10 +405,10 @@ public class LinhaCOntrole : MonoBehaviour
             
         }
     }
-    public void cameraShake() {
+    /*public void cameraShake() {
          // If the Cinemachine componet is not set, avoid update
-        if (VirtualCamera != null && virtualCameraNoise != null)
-        {
+        //if (VirtualCamera != null && virtualCameraNoise != null)
+       // {
             // If Camera Shake effect is still playing
             if (ShakeElapsedTime > 0)
             {
@@ -438,5 +426,5 @@ public class LinhaCOntrole : MonoBehaviour
                 ShakeElapsedTime = 0f;
             }
         }
-    }
+    } ;*/
 }

@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class ControllerFade : MonoBehaviour
 {
     public static ControllerFade _instanciaFade;
+    public GameObject _imagemFadeGM;
     public Image _imagemFade;
     public Color _corInicial;
     public Color _corFinal;
@@ -33,6 +34,7 @@ public class ControllerFade : MonoBehaviour
     }
 
     IEnumerator inicioFade() {
+        _imagemFadeGM.SetActive(true);
         _isFade = true;
         _tempo = 0f;
 
@@ -41,7 +43,7 @@ public class ControllerFade : MonoBehaviour
             _tempo = _tempo + Time.deltaTime;
             yield return null;
         }
-
+        _imagemFadeGM.SetActive(false);
         _isFade = false;
     }
 }
