@@ -1714,6 +1714,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbabf47d3df089640a58fb3523afde0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  idioma: pt
   instance: {fileID: 0}
   tempoInciarPalavra: 0
   slider: {fileID: 1137854717}
@@ -1721,11 +1722,20 @@ MonoBehaviour:
   sFX: {fileID: 1679059239}
   musicFase1: {fileID: 8300000, guid: 8d6d37c308d99c74da6fbf0e7b09b6f2, type: 3}
   musicMenu: {fileID: 8300000, guid: 0351ea1ea15c86a4e89647e678f1f704, type: 3}
-  fxCombo1: {fileID: 8300000, guid: 59425fdb4ef42bd4a85f3ad9202a54ca, type: 3}
-  fxCombo2: {fileID: 8300000, guid: 3ed45cf6f23c4bd4faeb4b183d8d0d16, type: 3}
-  fxCombo3: {fileID: 8300000, guid: f464d9d5fb5d0b54f80dd281072199f0, type: 3}
-  fxClick: {fileID: 8300000, guid: 6c7cf34fba55573438cc06b39d9366be, type: 3}
-  fxPalavra: {fileID: 0}
+  fxCombo1: {fileID: 8300000, guid: 116ee7d971f098b459290f8a1a65efac, type: 3}
+  fxCombo2: {fileID: 8300000, guid: 9466e5e9cb5c5e649a882dafa290021b, type: 3}
+  fxCombo3: {fileID: 8300000, guid: e271d56b860b84f43ae42064734d1ca9, type: 3}
+  fxCombo4: {fileID: 8300000, guid: d1f0f12b1e20731418afab87d87a9fa6, type: 3}
+  fxCombo5: {fileID: 8300000, guid: fbad9f228396bc04a9053a6bf705d39e, type: 3}
+  fxCombo6: {fileID: 8300000, guid: a7673d186db24024397d96aa2a0ed8a0, type: 3}
+  fxCombo7: {fileID: 8300000, guid: 11ff78d6753373d4eb356e04386e58f8, type: 3}
+  fxVisualizaLetra1: {fileID: 8300000, guid: d8d04c6f80a1140db85ede568dab1f51, type: 3}
+  fxVisualizaLetra2: {fileID: 8300000, guid: 29bde6326b4c34ad8a12da475f79b50a, type: 3}
+  fxVisualizaLetra3: {fileID: 8300000, guid: 79e6baad2fd414b82a6d49ce1568d2e5, type: 3}
+  fxVisualizaLetra4: {fileID: 0}
+  fxVisualizaLetra5: {fileID: 0}
+  fxAcertouPalavra: {fileID: 8300000, guid: c1e016fd7823f54438f11939a0bb77ff, type: 3}
+  fxCompletouFase: {fileID: 0}
   fxError: {fileID: 8300000, guid: dbb31d0b31c748440a9b6503e28668da, type: 3}
   fxVictory: {fileID: 8300000, guid: 2b109d900a3851d4ea9cdc12de037530, type: 3}
   maxVol: 0

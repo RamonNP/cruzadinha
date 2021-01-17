@@ -83,12 +83,6 @@ public class GameController : GameControllerBase
         //audioController.changeMusic(audioController.musicFase1, "Fase_" + audioController.faseAtual, true, slider);
         SceneManager.LoadScene("Fase_"+ (cat + (int) tipo + audioController.faseAtual));
     }
-    public void Menu()
-    {
-        
-        audioController.changeMusic(audioController.fxPalavra, "Menu2", true, slider);
-        SceneManager.LoadScene("MenuPrincipal");
-    }
     public void Next()
     {
         //Debug.Log(proximaFase);
@@ -127,9 +121,9 @@ public class GameController : GameControllerBase
     IEnumerator playVictoryEnum()
     {
         yield return new WaitForSecondsRealtime(1f);
-        audioController.playFx(audioController.fxPalavra, 1);
+        //audioController.playFx(audioController.fxPalavra, 1);
         yield return new WaitForSecondsRealtime(0.5f);
-        audioController.playFx(audioController.fxVictory, 1);
+        //audioController.playFx(audioController.fxVictory, 1);
 
     }
 

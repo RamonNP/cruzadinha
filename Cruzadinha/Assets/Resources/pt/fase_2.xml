@@ -1,42 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 	<palavras>
 		<palavra name="palavra1">
-			<nome>FILE</nome>
+			<nome>MAÇO</nome>
+			<inicio>0</inicio>
 			<pontos>2</pontos>
-			<inicio>-0</inicio>
 			<vertical>S</vertical>
 			<pular>
 				<casa></casa>
 			</pular>
 			<letra>
-				<value>T</value>
-				<value>L</value>
-				<value>J</value>
-				<value>E</value>
+				<value>M</value>
+				<value>A</value>
+				<value>Ç</value>
+				<value>O</value>
 			</letra>
 		</palavra>
 		<palavra name="palavra2">
-			<nome>FEL</nome>
-			<pontos>-0.5</pontos>
-			<vertical>N</vertical>
+			<nome>AMO</nome>
+			<pontos>-1</pontos>
 			<inicio>0.5</inicio>
+			<vertical>N</vertical>
 			<pular>
 				<casa></casa>
 			</pular>
 		</palavra>
 		<palavra name="palavra3">
-			<nome>LEI</nome>
+			<nome>AÇO</nome>
+			<inicio>-1</inicio>
 			<pontos>0.5</pontos>
-			<inicio>0.5</inicio>
 			<vertical>S</vertical>
 			<pular>
 				<casa></casa>
 			</pular>
 		</palavra>
 		<palavra name="palavra4">
-			<nome>FIEL</nome>
-			<pontos>-0</pontos>
-			<inicio>-0.5</inicio>
+			<nome>MOÇA</nome>
+			<pontos>0</pontos>
+			<inicio>2</inicio>
 			<vertical>N</vertical>
 			<pular>
 				<casa></casa>

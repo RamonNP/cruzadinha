@@ -25,7 +25,7 @@ public class CruzadinhaControleV2 : MonoBehaviour
         //}
         //Debug.Log("INICIO CARREGANDO");
         xmlLerDados = LerXml.getInstance();
-        PlayerPrefs.SetInt("faseAtual",1);
+        PlayerPrefs.SetInt("faseAtual",7);
         if(PlayerPrefs.GetInt("faseAtual") == 0) {
             objetos = xmlLerDados.LoadDialogoData(_audioControllerV2.idioma+"/fase_1");
             PlayerPrefs.SetInt("faseAtual",1);
@@ -41,11 +41,11 @@ public class CruzadinhaControleV2 : MonoBehaviour
     {
         
     }
-
+List<string> ListaLetrasControle = null;
     public void  preencherPlace() {
         gameController.pontos = 0;
         //variavel que guarda letras que sera apresentado na tela para usuario selecionar e montar palavras
-        List<string> ListaLetrasControle = xmlLerDados.pularletrasControle;
+        ListaLetrasControle = xmlLerDados.pularletrasControle;
         int y = 2;
         int x = -7;
         foreach (var item in objetos)
@@ -300,7 +300,7 @@ public class CruzadinhaControleV2 : MonoBehaviour
     }
 
     public void animacaoEMbaralhar() {
-        CameraShake._instance.ShakeCamera(5f, 0.05f);
+        //CameraShake._instance.ShakeCamera(5f, 0.05f);
         StartCoroutine("animacaoEMbaralharENUM");
     }
 
@@ -373,6 +373,7 @@ public class CruzadinhaControleV2 : MonoBehaviour
     public void proximaFase() {
         PlayerPrefs.SetInt("faseAtual",PlayerPrefs.GetInt("faseAtual")+1);
         SceneManager.LoadScene("Fase1");
+        GameObject.Find("Refresh").SetActive(false);
     }
 }
 

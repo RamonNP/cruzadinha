@@ -39,8 +39,17 @@ public class AudioControllerV2 : MonoBehaviour
     public AudioClip fxCombo1;
     public AudioClip fxCombo2;
     public AudioClip fxCombo3;
-    public AudioClip fxClick;
-    public AudioClip fxPalavra;
+    public AudioClip fxCombo4;
+    public AudioClip fxCombo5;
+    public AudioClip fxCombo6;
+    public AudioClip fxCombo7;
+    public AudioClip fxVisualizaLetra1;
+    public AudioClip fxVisualizaLetra2;
+    public AudioClip fxVisualizaLetra3;
+    public AudioClip fxVisualizaLetra4;
+    public AudioClip fxVisualizaLetra5;
+    public AudioClip fxAcertouPalavra;
+    public AudioClip fxCompletouFase;
     public AudioClip fxError;
     public AudioClip fxVictory;
 
@@ -59,11 +68,8 @@ public class AudioControllerV2 : MonoBehaviour
         maxVol = 1;
         minVol = 1;
         changeMusic(musicMenu, "Menu2", false, null);
-        //coroutine = playAudioEnum();
-        //StartCoroutine("playAudioEnum");
     }
     public void trocaCena(string nomeCena) {
-        //StartCoroutine("changeMusic");
         changeMusic(musicFase1, nomeCena, true, null);
     }
     public void changeMusic(AudioClip clip, string newScene, bool changeScene, Slider slider2)
@@ -148,9 +154,8 @@ public class AudioControllerV2 : MonoBehaviour
 
     public void playFx(AudioClip fx, float volume)
     {
-        object[] parms = new object[2]{fx, volume};
-        StartCoroutine("playFxInumerator", parms);
-        //aumentar volume da musica
+        sFX.volume = volume;
+        sFX.PlayOneShot(fx);
         
     }
 

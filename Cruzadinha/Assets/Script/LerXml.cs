@@ -56,7 +56,7 @@ public class LerXml : MonoBehaviour
                     obj.pular.Add(pular.InnerText);
                 }
             }
-            //print(item["letra"].InnerText);
+            //print(item["nome"].InnerText);
             if(item["letra"] != null) {
                 foreach(XmlNode letra in item["letra"].ChildNodes) {
                     pularletrasControle.Add(letra.InnerText);
@@ -68,22 +68,6 @@ public class LerXml : MonoBehaviour
         return list;
     }
 
-    public string TextoFormatado (string frase)
-	{
-		string temp = frase;
-
-		// Subtitui palavras especificas
-		temp = temp.Replace ("**cor=yellow", "<color=#FFFF00FF>");
-		temp = temp.Replace ("**cor=green", "<color=#008A22>");
-		temp = temp.Replace ("**cor=red", "<color=#ff0000ff>");
-		temp = temp.Replace ("**cor=orange", "<color=#ffa500ff>");
-		temp = temp.Replace ("**cor=prata", "<color=#9F9999>");
-		temp = temp.Replace ("fimnegrito**", "</b>");
-		temp = temp.Replace ("**negrito", "<b>");
-		temp = temp.Replace ("fimcor**", "</color>");
-
-		return temp;
-	}
 }
 
 public class Objeto {

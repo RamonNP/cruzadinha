@@ -1,121 +1,70 @@
 fileFormatVersion: 2
-guid: ea098f7829055b24e898195e1285e09f
+guid: d71bf780a2e67e349828bb3a10160abe
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1972596789969648297
-    second: Cru_milho.fw_0
+      213: 8810423505703445874
+    second: Gemas.fw_0
   - first:
-      213: 9011494375042839711
-    second: Cru_milho.fw_2
+      213: -8373307502014908721
+    second: Gemas.fw_1
   - first:
-      213: -7786932435446286373
-    second: Cru_milho.fw_3
+      213: 5938427489625411145
+    second: Gemas.fw_2
   - first:
-      213: 4851730600015375658
-    second: Cru_milho.fw_4
+      213: -714077626595071104
+    second: Gemas.fw_3
   - first:
-      213: 963368474717968737
-    second: Cru_milho.fw_5
+      213: 5764700354536266305
+    second: Gemas.fw_4
   - first:
-      213: 7685955187541723959
-    second: Cru_milho.fw_6
+      213: 8165245838562230356
+    second: Gemas.fw_5
   - first:
-      213: 3759890697525645241
-    second: Cru_milho.fw_7
+      213: 7966737870554128698
+    second: Gemas.fw_6
   - first:
-      213: -2469142214786902106
-    second: Cru_milho.fw_10
+      213: -7531559656249739502
+    second: Gemas.fw_7
   - first:
-      213: 1257719356500216810
-    second: Cru_milho.fw_12
+      213: -4060156779856904706
+    second: Gemas.fw_8
   - first:
-      213: 1499422518147193943
-    second: Cru_milho.fw_13
+      213: -3294492443934944400
+    second: Gemas.fw_9
   - first:
-      213: 1342136008495759206
-    second: Cru_milho.fw_14
+      213: 1882355279502856089
+    second: Gemas.fw_10
   - first:
-      213: 334409377285004561
-    second: Cru_milho.fw_15
+      213: -3196895133975410836
+    second: Gemas.fw_11
   - first:
-      213: 255706936539540071
-    second: Cru_milho.fw_16
+      213: 8443024784651284644
+    second: Gemas.fw_12
   - first:
-      213: 6275625630941743219
-    second: Cru_milho.fw_19
+      213: 6670143520415013333
+    second: Gemas.fw_13
   - first:
-      213: -7142358186545158929
-    second: Cru_milho.fw_21
+      213: 7707052609897346217
+    second: Gemas.fw_14
   - first:
-      213: 8022569723314300085
-    second: Cru_milho.fw_22
+      213: 1447183587917720747
+    second: Gemas.fw_15
   - first:
-      213: -8540109025972639821
-    second: Cru_milho.fw_23
+      213: 3715617139919686076
+    second: Gemas.fw_16
   - first:
-      213: -6808659957831816034
-    second: Cru_milho.fw_24
+      213: -939949145815655293
+    second: Gemas.fw_17
   - first:
-      213: 2529828356797663281
-    second: Cru_milho.fw_25
+      213: -3134429489839279416
+    second: Gemas.fw_18
   - first:
-      213: 4810896158067237687
-    second: Cru_milho.fw_26
+      213: -8816915935004550792
+    second: Gemas.fw_19
   - first:
-      213: 6292702614857544266
-    second: Cru_milho.fw_29
-  - first:
-      213: 405488688907283740
-    second: Cru_milho.fw_31
-  - first:
-      213: 4656346363146960254
-    second: Cru_milho.fw_32
-  - first:
-      213: 1106354882445664102
-    second: Cru_milho.fw_33
-  - first:
-      213: 3317858717043078499
-    second: Cru_milho.fw_34
-  - first:
-      213: 769629296901527946
-    second: Cru_milho.fw_35
-  - first:
-      213: 7845083756078578960
-    second: Cru_milho.fw_36
-  - first:
-      213: 4184049689717941281
-    second: Cru_milho.fw_39
-  - first:
-      213: 1734272870432013600
-    second: Cru_milho.fw_1
-  - first:
-      213: -8292678683034935801
-    second: Cru_milho.fw_8
-  - first:
-      213: 6815005375622172920
-    second: Cru_milho.fw_9
-  - first:
-      213: -6035608032046755659
-    second: Cru_milho.fw_11
-  - first:
-      213: -5152050645551886632
-    second: Cru_milho.fw_17
-  - first:
-      213: 7016401007038049924
-    second: Cru_milho.fw_18
-  - first:
-      213: -1080259945205429136
-    second: Cru_milho.fw_20
-  - first:
-      213: -8151858029062706186
-    second: Cru_milho.fw_27
-  - first:
-      213: -1651684838911843738
-    second: Cru_milho.fw_28
-  - first:
-      213: -7045865371704054055
-    second: Cru_milho.fw_30
+      213: 4850561383730927077
+    second: Gemas.fw_20
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -195,7 +144,7 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
   - serializedVersion: 2
-    buildTarget: Android
+    buildTarget: Windows Store Apps
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -206,7 +155,7 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
   - serializedVersion: 2
-    buildTarget: WebGL
+    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -220,7 +169,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Cru_milho.fw_0
+      name: Gemas.fw_0
       rect:
         serializedVersion: 2
         x: 0
@@ -234,14 +183,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: efd0f706de95ad740a0b72bde5916a39
-      internalID: -1972596789969648297
+      spriteID: ec402f9076d98eb4ea80af7b63bad138
+      internalID: 8810423505703445874
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cru_milho.fw_1
+      name: Gemas.fw_1
       rect:
         serializedVersion: 2
         x: 100
@@ -255,14 +204,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b441a76e9429f24428daa1cc8a4597b2
-      internalID: 1734272870432013600
+      spriteID: d811f6a3cccf6cb4199a9ba881e312d9
+      internalID: -8373307502014908721
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cru_milho.fw_2
+      name: Gemas.fw_2
       rect:
         serializedVersion: 2
         x: 200
@@ -276,14 +225,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1cd331296c978ee4cadc559d0ed2004a
-      internalID: 9011494375042839711
+      spriteID: 66bc221fab13d564b8d4eef5fed6c708
+      internalID: 5938427489625411145
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cru_milho.fw_3
+      name: Gemas.fw_3
       rect:
         serializedVersion: 2
         x: 300
@@ -297,14 +246,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ff6096404ab3ff44ea63b20866ed68f9
-      internalID: -7786932435446286373
+      spriteID: 3f37cf81c4278d748b3d0f671bb6f917
+      internalID: -714077626595071104
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cru_milho.fw_4
+      name: Gemas.fw_4
       rect:
         serializedVersion: 2
         x: 400
@@ -318,119 +267,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 68d384d439f5b504a9f550814e9c3d14
-      internalID: 4851730600015375658
+      spriteID: 043fd4808d55a684587223ab1468389c
+      internalID: 5764700354536266305
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cru_milho.fw_5
-      rect:
-        serializedVersion: 2
-        x: 500
-        y: 412
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: da0b5d56ba40e384a954cd360ca09f6a
-      internalID: 963368474717968737
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cru_milho.fw_6
-      rect:
-        serializedVersion: 2
-        x: 600
-        y: 412
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4a759aa63fa90994e96af02e2ba81e9d
-      internalID: 7685955187541723959
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cru_milho.fw_7
-      rect:
-        serializedVersion: 2
-        x: 700
-        y: 412
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4f992c94e7186754d81e9ff9f13aaf67
-      internalID: 3759890697525645241
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cru_milho.fw_8
-      rect:
-        serializedVersion: 2
-        x: 800
-        y: 412
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 21409dd2383a83e4bb1105057017fdfb
-      internalID: -8292678683034935801
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cru_milho.fw_9
-      rect:
-        serializedVersion: 2
-        x: 900
-        y: 412
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ca4f266b7b6940743835dde019e5cf10
-      internalID: 6815005375622172920
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cru_milho.fw_10
+      name: Gemas.fw_5
       rect:
         serializedVersion: 2
         x: 0
@@ -444,14 +288,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cc3542c7da4f5ab4181d460eac4b28b1
-      internalID: -2469142214786902106
+      spriteID: 966373b2b885e5c4399a9a25cf8eedda
+      internalID: 8165245838562230356
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cru_milho.fw_11
+      name: Gemas.fw_6
       rect:
         serializedVersion: 2
         x: 100
@@ -465,14 +309,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: be738187a49bc7b478952645a5ee73a2
-      internalID: -6035608032046755659
+      spriteID: 13d6bdb8548fcd04bbb2fd97a1aef5d7
+      internalID: 7966737870554128698
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cru_milho.fw_12
+      name: Gemas.fw_7
       rect:
         serializedVersion: 2
         x: 200
@@ -486,14 +330,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf4d4d33b79c23741b8ea032f8a1f53c
-      internalID: 1257719356500216810
+      spriteID: 43ea90c5f56ade540815263ff99c3077
+      internalID: -7531559656249739502
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cru_milho.fw_13
+      name: Gemas.fw_8
       rect:
         serializedVersion: 2
         x: 300
@@ -507,14 +351,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 96d8868e98bd29a45b84903cf0b2527e
-      internalID: 1499422518147193943
+      spriteID: 8cfabfefb58fa8149a370068e0883f54
+      internalID: -4060156779856904706
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cru_milho.fw_14
+      name: Gemas.fw_9
       rect:
         serializedVersion: 2
         x: 400
@@ -528,119 +372,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4b70ddbbe2c4f5148b3c8ada19b4594b
-      internalID: 1342136008495759206
+      spriteID: 72570e4d7846bcc42b9fa289531cf4c4
+      internalID: -3294492443934944400
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cru_milho.fw_15
-      rect:
-        serializedVersion: 2
-        x: 500
-        y: 312
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a888b44682642a44ca9c15100b91522d
-      internalID: 334409377285004561
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cru_milho.fw_16
-      rect:
-        serializedVersion: 2
-        x: 600
-        y: 312
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0c0ed0436b3e0c046aee84aa0b4fad52
-      internalID: 255706936539540071
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cru_milho.fw_17
-      rect:
-        serializedVersion: 2
-        x: 700
-        y: 312
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 54b518c4a0d828c4cb98a661fb4efc5b
-      internalID: -5152050645551886632
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cru_milho.fw_18
-      rect:
-        serializedVersion: 2
-        x: 800
-        y: 312
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 85458c1fd897a414f91ac22602829f27
-      internalID: 7016401007038049924
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cru_milho.fw_19
-      rect:
-        serializedVersion: 2
-        x: 900
-        y: 312
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 814881fe113763e418b46480cafb10f0
-      internalID: 6275625630941743219
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cru_milho.fw_20
+      name: Gemas.fw_10
       rect:
         serializedVersion: 2
         x: 0
@@ -654,14 +393,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d5f693f9d5a47ae4c8bc7851240450d6
-      internalID: -1080259945205429136
+      spriteID: 6b39e1e518a95f84880541ccf7d5d81e
+      internalID: 1882355279502856089
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cru_milho.fw_21
+      name: Gemas.fw_11
       rect:
         serializedVersion: 2
         x: 100
@@ -675,14 +414,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d039b5789e4f39a4587acc64ad6afe1f
-      internalID: -7142358186545158929
+      spriteID: c44a1e52daa43b74ebe8ad567e1fc299
+      internalID: -3196895133975410836
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cru_milho.fw_22
+      name: Gemas.fw_12
       rect:
         serializedVersion: 2
         x: 200
@@ -696,14 +435,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f6e9a07f17b7ffc449b03af446cb81b2
-      internalID: 8022569723314300085
+      spriteID: f2857543fbf56d442b0f7551abbbe991
+      internalID: 8443024784651284644
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cru_milho.fw_23
+      name: Gemas.fw_13
       rect:
         serializedVersion: 2
         x: 300
@@ -717,14 +456,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aa6cc2c77750cb74ca91bfa4e9c783c5
-      internalID: -8540109025972639821
+      spriteID: ef222f524b0b04e44adab57a6f7941c1
+      internalID: 6670143520415013333
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cru_milho.fw_24
+      name: Gemas.fw_14
       rect:
         serializedVersion: 2
         x: 400
@@ -738,119 +477,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1dc6067066dcaa3478ac56817bbbcaea
-      internalID: -6808659957831816034
+      spriteID: 1a4df88a099fa7945ab42022788bfaf1
+      internalID: 7707052609897346217
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cru_milho.fw_25
-      rect:
-        serializedVersion: 2
-        x: 500
-        y: 212
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 15e841b598d028446a7a609d86e919de
-      internalID: 2529828356797663281
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cru_milho.fw_26
-      rect:
-        serializedVersion: 2
-        x: 600
-        y: 212
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3d2f185cc103079418d362583e886450
-      internalID: 4810896158067237687
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cru_milho.fw_27
-      rect:
-        serializedVersion: 2
-        x: 700
-        y: 212
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c01c7bef52c7b0f4184ad8f8bef32171
-      internalID: -8151858029062706186
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cru_milho.fw_28
-      rect:
-        serializedVersion: 2
-        x: 800
-        y: 212
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1a886cbd9bb53eb47aafd8f4f1e26697
-      internalID: -1651684838911843738
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cru_milho.fw_29
-      rect:
-        serializedVersion: 2
-        x: 900
-        y: 212
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b51a76faa76550045868304685896b80
-      internalID: 6292702614857544266
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cru_milho.fw_30
+      name: Gemas.fw_15
       rect:
         serializedVersion: 2
         x: 0
@@ -864,17 +498,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 14e30ce4a2a76ac42bcd770fcb95a677
-      internalID: -7045865371704054055
+      spriteID: a758293eaf51f26488f60ebd2d24682e
+      internalID: 1447183587917720747
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cru_milho.fw_31
+      name: Gemas.fw_16
       rect:
         serializedVersion: 2
-        x: 700
+        x: 100
         y: 112
         width: 100
         height: 100
@@ -885,8 +519,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bb73282e874d61f4ca723830e386ad43
-      internalID: 405488688907283740
+      spriteID: 89195bd2db834774880a0630d820790b
+      internalID: 3715617139919686076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gemas.fw_17
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 112
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05c992856554cc941b82dce3f808c7da
+      internalID: -939949145815655293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gemas.fw_18
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 112
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d9ef9a2612d2984683b525e7c9e75bc
+      internalID: -3134429489839279416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gemas.fw_19
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 112
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6bb9ce54a6c4dd45abe45be6a0755a4
+      internalID: -8816915935004550792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gemas.fw_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 12
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaa78ed740e18384883a175cd7c4d0a5
+      internalID: 4850561383730927077
       vertices: []
       indices: 
       edges: []
@@ -894,7 +612,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5756af835b414e14fa84153b09967db2
+    spriteID: f1513c442ab634b4a95177c88ad9d8c4
     internalID: 0
     vertices: []
     indices: 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 	<palavras>
 		<palavra name="palavra1">
-			<nome>BRIO</nome>
+			<nome>MURO</nome>
 			<inicio>0</inicio>
 			<pontos>2</pontos>
 			<vertical>S</vertical>
@@ -9,34 +9,34 @@
 				<casa></casa>
 			</pular>
 			<letra>
-				<value>B</value>
-				<value>O</value>
+				<value>M</value>
 				<value>R</value>
-				<value>I</value>
+				<value>O</value>
+				<value>U</value>
 			</letra>
 		</palavra>
 		<palavra name="palavra2">
-			<nome>BOI</nome>
-			<pontos>1</pontos>
-			<inicio>2.5</inicio>
+			<nome>UM</nome>
+			<pontos>-1.5</pontos>
+			<inicio>1</inicio>
 			<vertical>N</vertical>
 			<pular>
 				<casa></casa>
 			</pular>
 		</palavra>
 		<palavra name="palavra3">
-			<nome>BIO</nome>
-			<inicio>1</inicio>
-			<pontos>2.5</pontos>
+			<nome>RUM</nome>
+			<inicio>-1</inicio>
+			<pontos>2</pontos>
 			<vertical>S</vertical>
 			<pular>
 				<casa></casa>
 			</pular>
 		</palavra>
 		<palavra name="palavra4">
-			<nome>RIO</nome>
-			<pontos>0</pontos>
-			<inicio>1.5</inicio>
+			<nome>RUMO</nome>
+			<pontos>-1</pontos>
+			<inicio>2</inicio>
 			<vertical>N</vertical>
 			<pular>
 				<casa></casa>

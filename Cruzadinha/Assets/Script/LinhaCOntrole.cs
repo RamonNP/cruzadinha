@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
@@ -6,6 +6,7 @@ using Cinemachine;
 public class LinhaCOntrole : MonoBehaviour
 {
 
+    private AudioControllerV2 audioController;
     [SerializeField]
     public Vector2 initialPosition;
     private IEnumerator coroutine;
@@ -88,7 +89,7 @@ public class LinhaCOntrole : MonoBehaviour
         parabens.SetActive(false);
         cardCompletou.SetActive(false);
         ternimouFase = false;
-
+        audioController = FindObjectOfType(typeof(AudioControllerV2)) as AudioControllerV2;
         
     }
     //esta se perdendo na hora de guarda posição inicial, com esse metodo aguarda definir para depois guardar.
@@ -107,7 +108,7 @@ public class LinhaCOntrole : MonoBehaviour
         if(!ternimouFase){
             Touch touch = simulatess();
             if (Application.platform == RuntimePlatform.Android) {
-                touch = simulatess();//Input.GetTouch(0); SEM SIMULADOR
+                touch = Input.GetTouch(0);//simulatess();//Input.GetTouch(0); SEM SIMULADOR
             } else if (Application.platform == RuntimePlatform.OSXEditor) {
                 Input.GetTouch(0); 
             }
@@ -138,7 +139,7 @@ public class LinhaCOntrole : MonoBehaviour
                             qtdLetrasEscolhidas++;
                             //preenche a primeira letra com a primeira escolha, assim a proxima letra não pode ser a mesma.
                             letrasNaoRepetir.Add(item.GetComponent<Place>().letraPace+item.transform.position.x+item.transform.position.y);
-                            acertouPalavra(item.GetComponent<Place>().letraPace);
+                            montarPalavraAcertou(item.GetComponent<Place>().letraPace);
                             
                         }
                     }
@@ -165,13 +166,17 @@ public class LinhaCOntrole : MonoBehaviour
                                 letrasNaoRepetir.Add(item.GetComponent<Place>().letraPace+item.transform.position.x+item.transform.position.y);
                                 //Coloca a letra escolhida na palavra que estamos montando
                                 montarPalavra(qtdLetrasConectadas, item);
-                                acertouPalavra(item.GetComponent<Place>().letraPace);
+                                montarPalavraAcertou(item.GetComponent<Place>().letraPace);
                             }
                         }
                     }
                     break;
 
                 case TouchPhase.Ended:
+                    // para corrigir bug de refresh no teclado letras
+                    if(palavraMontada != null) {
+                        acertouPalavra();
+                    }
                     lineRenderer.enabled = false;
                     this.transform.position = new Vector3(0,0,0);
                     var releasePosition = GetCurrentMousePosition(touch.position).GetValueOrDefault();
@@ -192,11 +197,10 @@ public class LinhaCOntrole : MonoBehaviour
         }
 
     }
-    private void acertouPalavra(string letra) {
-        palavraMontada  = palavraMontada + letra;
+    private void acertouPalavra() {
+
         List<GameObject> palavraGameObjects = null;
-        
-        //pegar item 
+         //pegar item 
         if(cruzadinhaControleV2.palavrasCruzadinha.TryGetValue(palavraMontada, out palavraGameObjects)) {
             
 
@@ -213,8 +217,43 @@ public class LinhaCOntrole : MonoBehaviour
             
         }
     }
+    private void montarPalavraAcertou(string letra) {
+        palavraMontada  = palavraMontada + letra;
+        
+        switch (palavraMontada.Length)
+        {
+            case 1:
+                audioController.playFx(audioController.fxCombo1, 1);
+                break;
+            case 2:
+                audioController.playFx(audioController.fxCombo2, 1);
+                break;
+            case 3:
+                audioController.playFx(audioController.fxCombo3, 1);
+                break;
+            case 4:
+                audioController.playFx(audioController.fxCombo4, 1);
+                break;
+            case 5:
+                audioController.playFx(audioController.fxCombo5, 1);
+                break;
+            case 6:
+                audioController.playFx(audioController.fxCombo6, 1);
+                break;
+            case 7:
+                audioController.playFx(audioController.fxCombo7, 1);
+                break;
+            default:
+                break;
+        }
+             
+
+    }
 
     IEnumerator animacaoAcertouENUM(List<GameObject> palavraGameObjects) {
+        //toca o som de quando acerta a palavra
+        audioController.playFx(audioController.fxAcertouPalavra, 1);
+
         //quando completa a palavra, apresenta bom ou otimo ou bravo ou parabens
         int rand = Random.Range(2,8);
         GameObject obj = bom;
@@ -237,6 +276,8 @@ public class LinhaCOntrole : MonoBehaviour
             efeito.gameObject.transform.localPosition = item.transform.position;
             yield return new WaitForSeconds(0.4f);
             CameraShake._instance.ShakeCamera(5f, 0.01f);
+            //toca o som de quando Aparece as Letras na cruzadinha
+            audioController.playFx(audioController.fxVisualizaLetra2, 1);
             GameObject letra1 =  Instantiate (GameObject.Find(item.GetComponent<Place>().letraPace));
             letra1.gameObject.transform.localPosition = item.transform.position;
             letra1.gameObject.transform.localScale =  item.transform.localScale;
@@ -245,8 +286,10 @@ public class LinhaCOntrole : MonoBehaviour
             Destroy(efeito);
         }
 
+        //codigos para quando completar a fase
         if(cruzadinhaControleV2.palavrasCruzadinha.Count == 0){
 
+            //explodindo os botoes quando termina a fase
             try
             {
                 ternimouFase = true;
@@ -255,6 +298,12 @@ public class LinhaCOntrole : MonoBehaviour
                 GameObject efeito1 =  Instantiate (GameObject.Find("Explosao"));
                 efeito1.gameObject.transform.position = go1.gameObject.transform.position;
                 Destroy(go1);
+
+                //desativar botão refresh, pois foi destruido os botoes no efeito
+                GameObject rf = GameObject.Find("Refresh");
+                GameObject efeitorf =  Instantiate (GameObject.Find("Explosao"));
+                efeitorf.gameObject.transform.position = rf.gameObject.transform.position;
+                Destroy(rf);
 
                 GameObject go2 = GameObject.Find("letra2");
                 GameObject efeito2 =  Instantiate (GameObject.Find("Explosao"));
@@ -290,7 +339,7 @@ public class LinhaCOntrole : MonoBehaviour
             {
                  // TODO
             }
-
+            audioController.playFx(audioController.fxCompletouFase, 1);
             cardCompletou.SetActive(true);
 
         }
