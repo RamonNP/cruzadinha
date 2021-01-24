@@ -35,36 +35,45 @@ public class LerXml : MonoBehaviour
         
     }
 
-    public List<Objeto> LoadDialogoData(string caminho)
+    public List<Objeto> LoadDialogoData(string caminho) 
     {
         List<Objeto> list = new List<Objeto>();
-        TextAsset xmlData = Resources.Load<TextAsset>(caminho);
-        print(caminho);
-        XmlDocument XmlDocument = new XmlDocument();
-        XmlDocument.LoadXml(xmlData.text);
-        foreach(XmlNode item in XmlDocument["palavras"].ChildNodes)
+        try
         {
-            Objeto obj = new Objeto();
-            obj.nome = item["nome"].InnerText;
-            obj.pontos = item["pontos"].InnerText;
-            //obj.dificuldade = item["dificuldade"].InnerText;
-            obj.vertical = item["vertical"].InnerText;
-            obj.inicio = item["inicio"].InnerText;
-            //print( obj.inicio + "-"+  obj.pontos);
-            if(item["pular"].ChildNodes != null) {
-                foreach(XmlNode pular in item["pular"].ChildNodes) {
-                    obj.pular.Add(pular.InnerText);
+            TextAsset xmlData = Resources.Load<TextAsset>(caminho);
+            //print(caminho);
+            XmlDocument XmlDocument = new XmlDocument();
+            XmlDocument.LoadXml(xmlData.text);
+            foreach(XmlNode item in XmlDocument["palavras"].ChildNodes)
+            {
+                Objeto obj = new Objeto();
+                obj.nome = item["nome"].InnerText;
+                obj.pontos = item["pontos"].InnerText;
+                //obj.dificuldade = item["dificuldade"].InnerText;
+                obj.vertical = item["vertical"].InnerText;
+                obj.inicio = item["inicio"].InnerText;
+                //print( obj.inicio + "-"+  obj.pontos);
+                if(item["pular"].ChildNodes != null) {
+                    foreach(XmlNode pular in item["pular"].ChildNodes) {
+                        obj.pular.Add(pular.InnerText);
+                    }
                 }
-            }
-            //print(item["nome"].InnerText);
-            if(item["letra"] != null) {
-                foreach(XmlNode letra in item["letra"].ChildNodes) {
-                    pularletrasControle.Add(letra.InnerText);
-                    obj.pular.Add(letra.InnerText);
+                //print(item["nome"].InnerText);
+                if(item["letra"] != null) {
+                    foreach(XmlNode letra in item["letra"].ChildNodes) {
+                        pularletrasControle.Add(letra.InnerText);
+                        obj.pular.Add(letra.InnerText);
+                    }
                 }
+                list.Add(obj);
             }
-            list.Add(obj);
         }
+        catch (System.Exception)
+        {
+            
+            throw ;
+        }
+
         return list;
     }
 

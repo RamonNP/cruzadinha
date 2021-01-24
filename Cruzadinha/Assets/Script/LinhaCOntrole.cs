@@ -6,6 +6,7 @@ using Cinemachine;
 public class LinhaCOntrole : MonoBehaviour
 {
 
+    private CardCompletouController cardCompletouController;
     private AudioControllerV2 audioController;
     [SerializeField]
     public Vector2 initialPosition;
@@ -70,6 +71,7 @@ public class LinhaCOntrole : MonoBehaviour
         StartCoroutine("waith");
 
         cruzadinhaControleV2 = FindObjectOfType(typeof(CruzadinhaControleV2)) as CruzadinhaControleV2;
+        cardCompletouController = FindObjectOfType(typeof(CardCompletouController)) as CardCompletouController;
 
         // Get Virtual Camera Noise Profile
         if (VirtualCamera != null){
@@ -197,21 +199,23 @@ public class LinhaCOntrole : MonoBehaviour
         }
 
     }
-    private void acertouPalavra() {
+    public void acertouPalavra() {
 
         List<GameObject> palavraGameObjects = null;
          //pegar item 
         if(cruzadinhaControleV2.palavrasCruzadinha.TryGetValue(palavraMontada, out palavraGameObjects)) {
             
-
+            //print("1");
             //chama animação de mostrar palavras prontras
             coroutine = animacaoAcertouENUM(palavraGameObjects);
             StartCoroutine(coroutine);
 
+            //print("2");
             //apaga as linhas por que acertou a palavras
             LineRenderer lineRenderer = GetComponent<LineRenderer>();
             lineRenderer.enabled = false;
 
+            //print("3");
             //remover palavra da lista
             cruzadinhaControleV2.palavrasCruzadinha.Remove(palavraMontada);
             
@@ -341,6 +345,8 @@ public class LinhaCOntrole : MonoBehaviour
             }
             audioController.playFx(audioController.fxCompletouFase, 1);
             cardCompletou.SetActive(true);
+            //abre a proxima pedra para liberar o presente
+            cardCompletouController.abrirProximaGema();
 
         }
         palavraMontada = null;

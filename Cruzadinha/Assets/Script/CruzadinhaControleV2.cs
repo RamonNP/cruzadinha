@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class CruzadinhaControleV2 : MonoBehaviour
 {
+    public bool _completouBau = false;
     private AudioControllerV2 _audioControllerV2;
     private GameController gameController;
     public GameObject alfabeto;
@@ -25,13 +26,25 @@ public class CruzadinhaControleV2 : MonoBehaviour
         //}
         //Debug.Log("INICIO CARREGANDO");
         xmlLerDados = LerXml.getInstance();
-        PlayerPrefs.SetInt("faseAtual",7);
+        //PlayerPrefs.SetInt("faseAtual",0);
+        
         if(PlayerPrefs.GetInt("faseAtual") == 0) {
             objetos = xmlLerDados.LoadDialogoData(_audioControllerV2.idioma+"/fase_1");
             PlayerPrefs.SetInt("faseAtual",1);
         } else {
-            string fase = "/fase_"+PlayerPrefs.GetInt("faseAtual").ToString();
-            objetos = xmlLerDados.LoadDialogoData(_audioControllerV2.idioma+fase);
+            //caso ocorra erro por chegar ao final, inicia novamente
+            try
+            {
+                string fase = "/fase_"+PlayerPrefs.GetInt("faseAtual").ToString();
+                objetos = xmlLerDados.LoadDialogoData(_audioControllerV2.idioma+fase);
+                
+            }
+            catch (System.Exception)
+            {
+                objetos = xmlLerDados.LoadDialogoData(_audioControllerV2.idioma+"/fase_1");
+                PlayerPrefs.SetInt("faseAtual",1);
+                throw;
+            }
         }
         preencherPlace();
     }
@@ -371,9 +384,26 @@ List<string> ListaLetrasControle = null;
     }
 
     public void proximaFase() {
+        if(_completouBau) {
+            //Chama função que guarda as moedas geradas
+            AbrirBauMoedasAleatorias aba = FindObjectOfType(typeof(AbrirBauMoedasAleatorias)) as AbrirBauMoedasAleatorias;
+            TextoMoedasAdd tma = FindObjectOfType(typeof(TextoMoedasAdd)) as TextoMoedasAdd;
+            tma.addMoedas(aba._qtdMoedaMax);
+            _completouBau = false;
+            //Chama Proxima cena depois de 3 segundos
+            StartCoroutine("AgruparMoedasENUM");
+        } else {
+            PlayerPrefs.SetInt("faseAtual",PlayerPrefs.GetInt("faseAtual")+1);
+            SceneManager.LoadScene("Fase1");
+        }
+        //GameObject.Find("Refresh").SetActive(false);
+    }
+
+    IEnumerator AgruparMoedasENUM() {
+        yield return new WaitForSeconds(2f);
         PlayerPrefs.SetInt("faseAtual",PlayerPrefs.GetInt("faseAtual")+1);
         SceneManager.LoadScene("Fase1");
-        GameObject.Find("Refresh").SetActive(false);
+
     }
 }
 
