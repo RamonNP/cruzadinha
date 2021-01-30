@@ -48,6 +48,7 @@ public class LinhaCOntrole : MonoBehaviour
     private GameObject parabens;
 
     private bool ternimouFase = false;
+    public int _letraDica = 0;
     
     void Start()
     {
@@ -199,6 +200,49 @@ public class LinhaCOntrole : MonoBehaviour
         }
 
     }
+
+    public void dicasLiberarPalavra() {
+        TextoMoedasAdd tma = FindObjectOfType(typeof(TextoMoedasAdd)) as TextoMoedasAdd;
+        if(tma.qtdMoedaMax < 70) {
+            audioController.playFx(audioController.fxError, 1);
+            return;
+        } 
+        List<GameObject> palavra = null;
+        int letra = 0;
+        //percorre para encontrar a primeira palavra não preenchida
+        foreach (List<GameObject> item in cruzadinhaControleV2.palavrasCruzadinha.Values)  {
+           if(letra == 0){
+               palavra = item;
+           }
+           letra ++;
+        }
+       letra = 0;
+       //percorre para encontrar a primeira letra que não foi preenchida e preencher 
+        foreach (var item in palavra)
+        {
+            if(!item.GetComponent<Place>()._preenchido){
+                GameObject efeito =  Instantiate (GameObject.Find("EfeitoAmarelo"));
+                efeito.gameObject.transform.localPosition = item.transform.position;
+                //yield return new WaitForSeconds(0.4f);
+                CameraShake._instance.ShakeCamera(5f, 0.01f);
+                //toca o som de quando Aparece as Letras na cruzadinha
+                audioController.playFx(audioController.fxVisualizaLetra2, 1);
+                GameObject letra1 =  Instantiate (GameObject.Find(item.GetComponent<Place>().letraPace));
+                letra1.gameObject.transform.localPosition = item.transform.position;
+                letra1.gameObject.transform.localScale =  item.transform.localScale;
+                letra1.GetComponent<SpriteRenderer>().sortingOrder = 1;
+                //yield return new WaitForSeconds(0.1f);
+                Destroy(efeito);
+                item.GetComponent<Place>()._preenchido = true;
+                return;
+            } else {
+                _letraDica++;
+            }
+            letra ++;
+        }
+        _letraDica=0;
+    }
+
     public void acertouPalavra() {
 
         List<GameObject> palavraGameObjects = null;
@@ -218,6 +262,8 @@ public class LinhaCOntrole : MonoBehaviour
             //print("3");
             //remover palavra da lista
             cruzadinhaControleV2.palavrasCruzadinha.Remove(palavraMontada);
+            //reseta a contagem das pavras para liberar as dicas    
+            _letraDica = 0;
             
         }
     }
@@ -276,18 +322,20 @@ public class LinhaCOntrole : MonoBehaviour
          //percorrer places para instanciar novas letras, nas mesma posiçoes
         foreach (var item in palavraGameObjects)
         {
-            GameObject efeito =  Instantiate (GameObject.Find("EfeitoAmarelo"));
-            efeito.gameObject.transform.localPosition = item.transform.position;
-            yield return new WaitForSeconds(0.4f);
-            CameraShake._instance.ShakeCamera(5f, 0.01f);
-            //toca o som de quando Aparece as Letras na cruzadinha
-            audioController.playFx(audioController.fxVisualizaLetra2, 1);
-            GameObject letra1 =  Instantiate (GameObject.Find(item.GetComponent<Place>().letraPace));
-            letra1.gameObject.transform.localPosition = item.transform.position;
-            letra1.gameObject.transform.localScale =  item.transform.localScale;
-            letra1.GetComponent<SpriteRenderer>().sortingOrder = 1;
-            yield return new WaitForSeconds(0.1f);
-            Destroy(efeito);
+            if(!item.GetComponent<Place>()._preenchido){
+                GameObject efeito =  Instantiate (GameObject.Find("EfeitoAmarelo"));
+                efeito.gameObject.transform.localPosition = item.transform.position;
+                yield return new WaitForSeconds(0.4f);
+                CameraShake._instance.ShakeCamera(5f, 0.01f);
+                //toca o som de quando Aparece as Letras na cruzadinha
+                audioController.playFx(audioController.fxVisualizaLetra2, 1);
+                GameObject letra1 =  Instantiate (GameObject.Find(item.GetComponent<Place>().letraPace));
+                letra1.gameObject.transform.localPosition = item.transform.position;
+                letra1.gameObject.transform.localScale =  item.transform.localScale;
+                letra1.GetComponent<SpriteRenderer>().sortingOrder = 1;
+                yield return new WaitForSeconds(0.1f);
+                Destroy(efeito);
+            }
         }
 
         //codigos para quando completar a fase
@@ -344,6 +392,7 @@ public class LinhaCOntrole : MonoBehaviour
                  // TODO
             }
             audioController.playFx(audioController.fxCompletouFase, 1);
+            //abre o card completou
             cardCompletou.SetActive(true);
             //abre a proxima pedra para liberar o presente
             cardCompletouController.abrirProximaGema();

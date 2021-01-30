@@ -9,7 +9,7 @@ public class TextoMoedasAdd : MonoBehaviour
 
     private const string label = "{0}";
     private float m_frame;
-    private int qtdMoedaMax;
+    public int qtdMoedaMax;
 
     // Start is called before the first frame update
     void Start()
