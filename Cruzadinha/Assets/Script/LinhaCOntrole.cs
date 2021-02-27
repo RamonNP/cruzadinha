@@ -49,6 +49,7 @@ public class LinhaCOntrole : MonoBehaviour
 
     private bool ternimouFase = false;
     public int _letraDica = 0;
+    public int _qtdMoedasDicas = 70;
     
     void Start()
     {
@@ -203,7 +204,7 @@ public class LinhaCOntrole : MonoBehaviour
 
     public void dicasLiberarPalavra() {
         TextoMoedasAdd tma = FindObjectOfType(typeof(TextoMoedasAdd)) as TextoMoedasAdd;
-        if(tma.qtdMoedaMax < 70) {
+        if(tma.qtdMoedaMax < _qtdMoedasDicas) {
             audioController.playFx(audioController.fxError, 1);
             return;
         } 
@@ -234,6 +235,7 @@ public class LinhaCOntrole : MonoBehaviour
                 //yield return new WaitForSeconds(0.1f);
                 Destroy(efeito);
                 item.GetComponent<Place>()._preenchido = true;
+                tma.qtdMoedaMax = tma.qtdMoedaMax - _qtdMoedasDicas;
                 return;
             } else {
                 _letraDica++;
@@ -259,7 +261,8 @@ public class LinhaCOntrole : MonoBehaviour
             LineRenderer lineRenderer = GetComponent<LineRenderer>();
             lineRenderer.enabled = false;
 
-            //print("3");
+            //print(palavraMontada);
+
             //remover palavra da lista
             cruzadinhaControleV2.palavrasCruzadinha.Remove(palavraMontada);
             //reseta a contagem das pavras para liberar as dicas    
@@ -398,7 +401,7 @@ public class LinhaCOntrole : MonoBehaviour
             cardCompletouController.abrirProximaGema();
 
         }
-        palavraMontada = null;
+        //palavraMontada = null;
         yield return new WaitForSeconds(1f);
         obj.SetActive(false);
     }

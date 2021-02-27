@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<palavras>
+		<palavra name="palavra1">
+			<nome>FORÇA</nome>
+			<inicio>0</inicio>
+			<pontos>2</pontos>
+			<vertical>S</vertical>
+			<pular>
+				<casa></casa>
+			</pular>
+			<letra>
+				<value>R</value>
+				<value>A</value>
+				<value>Ç</value>
+				<value>F</value>
+				<value>O</value>
+			</letra>
+		</palavra>
+		<palavra name="palavra2">
+			<nome>ROÇA</nome>
+			<pontos>-0.5</pontos>
+			<inicio>1.5</inicio>
+			<vertical>N</vertical>
+			<pular>
+				<casa></casa>
+			</pular>
+		</palavra>
+		<palavra name="palavra3">
+			<nome>AÇO</nome>
+			<pontos>0</pontos>
+			<inicio>0</inicio>
+			<vertical>N</vertical>
+			<pular>
+				<casa></casa>
+			</pular>
+		</palavra>
+		<palavra name="palavra4">
+			<nome>ARO</nome>
+			<pontos>-0.5</pontos>
+			<inicio>1</inicio>
+			<vertical>n</vertical>
+			<pular>
+				<casa></casa>
+			</pular>
+		</palavra>
+	</palavras>

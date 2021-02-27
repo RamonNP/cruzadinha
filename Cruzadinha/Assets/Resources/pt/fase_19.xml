@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<palavras>
+		<palavra name="palavra1">
+			<nome>CALA</nome>
+			<inicio>0</inicio>
+			<pontos>2</pontos>
+			<vertical>S</vertical>
+			<pular>
+				<casa></casa>
+			</pular>
+			<letra>
+				<value>A</value>
+				<value>S</value>
+				<value>A</value>
+				<value>C</value>
+				<value>L</value>
+			</letra>
+		</palavra>
+		<palavra name="palavra2">
+			<nome>SAL</nome>
+			<pontos>-0.5</pontos>
+			<inicio>1.5</inicio>
+			<vertical>N</vertical>
+			<pular>
+				<casa></casa>
+			</pular>
+		</palavra>
+		<palavra name="palavra3">
+			<nome>ALA</nome>
+			<pontos>0</pontos>
+			<inicio>0.5</inicio>
+			<vertical>N</vertical>
+			<pular>
+				<casa></casa>
+			</pular>
+		</palavra>
+		<palavra name="palavra4">
+			<nome>SALA</nome>
+			<pontos>-0.5</pontos>
+			<inicio>-0.5</inicio>
+			<vertical>N</vertical>
+			<pular>
+				<casa></casa>
+			</pular>
+		</palavra>
+		<palavra name="palavra5">
+			<nome>SACA</nome>
+			<inicio>1</inicio>
+			<pontos>1</pontos>
+			<vertical>S</vertical>
+			<pular>
+				<casa></casa>
+			</pular>
+		</palavra>
+	</palavras>

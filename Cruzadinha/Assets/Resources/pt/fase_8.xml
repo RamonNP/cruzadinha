@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<palavras>
+		<palavra name="palavra1">
+			<nome>DOR</nome>
+			<inicio>1</inicio>
+			<pontos>2</pontos>
+			<vertical>S</vertical>
+			<pular>
+				<casa></casa>
+			</pular>
+			<letra>
+				<value>D</value>
+				<value>R</value>
+				<value>O</value>
+				<value>A</value>
+			</letra>
+		</palavra>
+		<palavra name="palavra2">
+			<nome>RODA</nome>
+			<pontos>0</pontos>
+			<inicio>0</inicio>
+			<vertical>N</vertical>
+			<pular>
+				<casa></casa>
+			</pular>
+		</palavra>
+		<palavra name="palavra3">
+			<nome>ARO</nome>
+			<inicio>0.5</inicio>
+			<pontos>1</pontos>
+			<vertical>S</vertical>
+			<pular>
+				<casa></casa>
+			</pular>
+		</palavra>
+		
+	</palavras>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<palavras>
+		<palavra name="palavra1">
+			<nome>NOTA</nome>
+			<inicio>1</inicio>
+			<pontos>2</pontos>
+			<vertical>S</vertical>
+			<pular>
+				<casa></casa>
+			</pular>
+			<letra>
+				<value>N</value>
+				<value>T</value>
+				<value>A</value>
+				<value>O</value>
+			</letra>
+		</palavra>
+		<palavra name="palavra2">
+			<nome>NAO</nome>
+			<pontos>-1</pontos>
+			<inicio>0.5</inicio>
+			<vertical>N</vertical>
+			<pular>
+				<casa></casa>
+			</pular>
+		</palavra>
+		<palavra name="palavra3">
+			<nome>ANO</nome>
+			<inicio>0</inicio>
+			<pontos>1.5</pontos>
+			<vertical>S</vertical>
+			<pular>
+				<casa></casa>
+			</pular>
+		</palavra>
+		<palavra name="palavra4">
+			<nome>ATO</nome>
+			<pontos>0</pontos>
+			<inicio>1.5</inicio>
+			<vertical>N</vertical>
+			<pular>
+				<casa></casa>
+			</pular>
+		</palavra>
+	</palavras>

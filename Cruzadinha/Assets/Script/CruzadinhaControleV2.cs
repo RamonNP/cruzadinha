@@ -26,7 +26,7 @@ public class CruzadinhaControleV2 : MonoBehaviour
         //}
         //Debug.Log("INICIO CARREGANDO");
         xmlLerDados = LerXml.getInstance();
-        //PlayerPrefs.SetInt("faseAtual",0);
+        PlayerPrefs.SetInt("faseAtual",21);
         
         if(PlayerPrefs.GetInt("faseAtual") == 0) {
             objetos = xmlLerDados.LoadDialogoData(_audioControllerV2.idioma+"/fase_1");

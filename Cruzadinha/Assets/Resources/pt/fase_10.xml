@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<palavras>
+		<palavra name="palavra1">
+			<nome>LAGO</nome>
+			<inicio>0</inicio>
+			<pontos>2.5</pontos>
+			<vertical>S</vertical>
+			<pular>
+				<casa></casa>
+			</pular>
+			<letra>
+				<value>G</value>
+				<value>L</value>
+				<value>O</value>
+				<value>A</value>
+			</letra>
+		</palavra>
+		<palavra name="palavra2">
+			<nome>GOLA</nome>
+			<pontos>-0.5</pontos>
+			<inicio>1</inicio>
+			<vertical>N</vertical>
+			<pular>
+				<casa></casa>
+			</pular>
+		</palavra>
+		<palavra name="palavra3">
+			<nome>GALO</nome>
+			<inicio>-0.5</inicio>
+			<pontos>1</pontos>
+			<vertical>S</vertical>
+			<pular>
+				<casa></casa>
+			</pular>
+		</palavra>
+		<palavra name="palavra4">
+			<nome>GOL</nome>
+			<pontos>0.5</pontos>
+			<inicio>-0.5</inicio>
+			<vertical>N</vertical>
+			<pular>
+				<casa></casa>
+			</pular>
+		</palavra>
+		<palavra name="palavra5">
+			<nome>ALGO</nome>
+			<inicio>1</inicio>
+			<pontos>1</pontos>
+			<vertical>S</vertical>
+			<pular>
+				<casa></casa>
+			</pular>
+		</palavra>
+	</palavras>

@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -28,7 +28,6 @@ public class AbrirBauMoedasAleatorias : MonoBehaviour
         }
     }
     public void GerarMoedasRandom(){
-        print("CHAMOPU GERAR RANHGE");
         int range = Random.Range(15,100);
         m_frame = 0;
         _qtdMoedaMax  = range;
