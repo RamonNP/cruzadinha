@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<palavras>
+		<palavra name="palavra1">
+			<nome>COLA</nome>
+			<inicio>0</inicio>
+			<pontos>2</pontos>
+			<vertical>S</vertical>
+			<pular>
+				<casa></casa>
+			</pular>
+			<letra>
+				<value>M</value>
+				<value>L</value>
+				<value>A</value>
+				<value>C</value>
+				<value>O</value>
+			</letra>
+		</palavra>
+		<palavra name="palavra2">
+			<nome>CLAMO</nome>
+			<pontos>0</pontos>
+			<inicio>2</inicio>
+			<vertical>N</vertical>
+			<pular>
+				<casa></casa>
+			</pular>
+		</palavra>
+		<palavra name="palavra3">
+			<nome>COMA</nome>
+			<pontos>-1.5</pontos>
+			<inicio>0.5</inicio>
+			<vertical>N</vertical>
+			<pular>
+				<casa></casa>
+			</pular>
+		</palavra>
+		<palavra name="palavra4">
+			<nome>CALMO</nome>
+			<inicio>1</inicio>
+			<pontos>2.5</pontos>
+			<vertical>S</vertical>
+			<pular>
+				<casa></casa>
+			</pular>
+		</palavra>
+		<palavra name="palavra5">
+			<nome>MOLA</nome>
+			<inicio>-1</inicio>
+			<pontos>1</pontos>
+			<vertical>S</vertical>
+			<pular>
+				<casa></casa>
+			</pular>
+		</palavra>
+		<palavra name="palavra6">
+			<nome>CALO</nome>
+			<pontos>-1.5</pontos>
+			<inicio>-0.5</inicio>
+			<vertical>N</vertical>
+			<pular>
+				<casa></casa>
+			</pular>
+		</palavra>
+	</palavras>

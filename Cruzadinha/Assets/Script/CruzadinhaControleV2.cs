@@ -6,9 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class CruzadinhaControleV2 : MonoBehaviour
 {
+    public int pontos;
+    public int faseAtual;
     public bool _completouBau = false;
     private AudioControllerV2 _audioControllerV2;
-    private GameController gameController;
     public GameObject alfabeto;
     private LerXml xmlLerDados;
     public List<GameObject> LetrasControleTransforme = new List<GameObject>() ;
@@ -19,30 +20,30 @@ public class CruzadinhaControleV2 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gameController = FindObjectOfType(typeof(GameController)) as GameController;
+        //AppDao.getInstance().saveInt("Fase"+27,1);
+        faseAtual = AppDao.getInstance().loadInt(AppDao.FASE);
         _audioControllerV2 = FindObjectOfType(typeof(AudioControllerV2)) as AudioControllerV2;
         //if(xmlLerDados !=null){
             //xmlLerDados.LoadDialogoData(gameController.idiomaFolder[gameController.idioma] + "/" + gameController.nomeArquivoXml); //ler o arquivo interação com itens;
         //}
         //Debug.Log("INICIO CARREGANDO");
         xmlLerDados = LerXml.getInstance();
-        PlayerPrefs.SetInt("faseAtual",21);
         
-        if(PlayerPrefs.GetInt("faseAtual") == 0) {
+        if(faseAtual == 0) {
             objetos = xmlLerDados.LoadDialogoData(_audioControllerV2.idioma+"/fase_1");
-            PlayerPrefs.SetInt("faseAtual",1);
+            AppDao.getInstance().saveInt(AppDao.FASE,1);
         } else {
             //caso ocorra erro por chegar ao final, inicia novamente
             try
             {
-                string fase = "/fase_"+PlayerPrefs.GetInt("faseAtual").ToString();
+                string fase = "/fase_"+faseAtual.ToString();
                 objetos = xmlLerDados.LoadDialogoData(_audioControllerV2.idioma+fase);
                 
             }
             catch (System.Exception)
             {
                 objetos = xmlLerDados.LoadDialogoData(_audioControllerV2.idioma+"/fase_1");
-                PlayerPrefs.SetInt("faseAtual",1);
+                AppDao.getInstance().saveInt(AppDao.FASE,1);
                 throw;
             }
         }
@@ -56,7 +57,7 @@ public class CruzadinhaControleV2 : MonoBehaviour
     }
 List<string> ListaLetrasControle = null;
     public void  preencherPlace() {
-        gameController.pontos = 0;
+        pontos = 0;
         //variavel que guarda letras que sera apresentado na tela para usuario selecionar e montar palavras
         ListaLetrasControle = xmlLerDados.pularletrasControle;
         int y = 2;
@@ -104,7 +105,7 @@ List<string> ListaLetrasControle = null;
                         palavraGameObject.Add(place);
                     }
                     //adiciona pontos para ser comparado quando terminar a cruzadinha, pontosa x acertos
-                    gameController.pontos++;
+                    pontos++;
                     if(x == -7) {
                         x = -6;
                     } else if(x == -6){
@@ -393,15 +394,17 @@ List<string> ListaLetrasControle = null;
             //Chama Proxima cena depois de 3 segundos
             StartCoroutine("AgruparMoedasENUM");
         } else {
-            PlayerPrefs.SetInt("faseAtual",PlayerPrefs.GetInt("faseAtual")+1);
+            AppDao.getInstance().saveInt(AppDao.FASE,faseAtual+1);
             SceneManager.LoadScene("Fase1");
         }
+        faseAtual +=1;
+        AppDao.getInstance().saveInt("Fase"+faseAtual,1);
         //GameObject.Find("Refresh").SetActive(false);
     }
 
     IEnumerator AgruparMoedasENUM() {
         yield return new WaitForSeconds(2f);
-        PlayerPrefs.SetInt("faseAtual",PlayerPrefs.GetInt("faseAtual")+1);
+        AppDao.getInstance().saveInt(AppDao.FASE,faseAtual+1);
         SceneManager.LoadScene("Fase1");
 
     }

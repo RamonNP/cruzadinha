@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 	<palavras>
 		<palavra name="palavra1">
-			<nome>RUMO</nome>
-			<inicio>0</inicio>
-			<pontos>2.5</pontos>
+			<nome>SARDA</nome>
+			<inicio>1</inicio>
+			<pontos>2</pontos>
 			<vertical>S</vertical>
 			<pular>
 				<casa></casa>
 			</pular>
 			<letra>
 				<value>R</value>
-				<value>M</value>
-				<value>U</value>
+				<value>D</value>
 				<value>S</value>
-				<value>O</value>
+				<value>A</value>
+				<value>A</value>
 			</letra>
 		</palavra>
 		<palavra name="palavra2">
-			<nome>SUMO</nome>
-			<pontos>-1.5</pontos>
-			<inicio>1</inicio>
+			<nome>ARDA</nome>
+			<pontos>-0.5</pontos>
+			<inicio>1.5</inicio>
 			<vertical>N</vertical>
 			<pular>
 				<casa></casa>
 			</pular>
 		</palavra>
 		<palavra name="palavra3">
-			<nome>URSO</nome>
-			<pontos>-1</pontos>
+			<nome>SARA</nome>
+			<pontos>-0.5</pontos>
 			<inicio>0</inicio>
 			<vertical>N</vertical>
 			<pular>
@@ -35,9 +35,9 @@
 			</pular>
 		</palavra>
 		<palavra name="palavra4">
-			<nome>MURO</nome>
-			<inicio>-0.5</inicio>
-			<pontos>1</pontos>
+			<nome>RASA</nome>
+			<inicio>0</inicio>
+			<pontos>1.5</pontos>
 			<vertical>S</vertical>
 			<pular>
 				<casa></casa>

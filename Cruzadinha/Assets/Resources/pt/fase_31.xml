@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<palavras>
+		<palavra name="palavra1">
+			<nome>OPTE</nome>
+			<inicio>0</inicio>
+			<pontos>2</pontos>
+			<vertical>S</vertical>
+			<pular>
+				<casa></casa>
+			</pular>
+			<letra>
+				<value>E</value>
+				<value>M</value>
+				<value>P</value>
+				<value>O</value>
+				<value>T</value>
+			</letra>
+		</palavra>
+		<palavra name="palavra2">
+			<nome>TEMO</nome>
+			<pontos>-1.5</pontos>
+			<inicio>2</inicio>
+			<vertical>N</vertical>
+			<pular>
+				<casa></casa>
+			</pular>
+		</palavra>
+		<palavra name="palavra3">
+			<nome>POTE</nome>
+			<pontos>0</pontos>
+			<inicio>1.5</inicio>
+			<vertical>N</vertical>
+			<pular>
+				<casa></casa>
+			</pular>
+		</palavra>
+		<palavra name="palavra4">
+			<nome>TOPEM</nome>
+			<inicio>1</inicio>
+			<pontos>1.5</pontos>
+			<vertical>S</vertical>
+			<pular>
+				<casa></casa>
+			</pular>
+		</palavra>
+		<palavra name="palavra5">
+			<nome>TOPE</nome>
+			<inicio>-1.5</inicio>
+			<pontos>2</pontos>
+			<vertical>S</vertical>
+			<pular>
+				<casa></casa>
+			</pular>
+		</palavra>
+		<palavra name="palavra6">
+			<nome>TEMPO</nome>
+			<pontos>-0.5</pontos>
+			<inicio>0.5</inicio>
+			<vertical>N</vertical>
+			<pular>
+				<casa></casa>
+			</pular>
+		</palavra>
+	</palavras>

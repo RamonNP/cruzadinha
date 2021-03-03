@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<palavras>
+		<palavra name="palavra1">
+			<nome>PORTA</nome>
+			<inicio>0.5</inicio>
+			<pontos>2</pontos>
+			<vertical>S</vertical>
+			<pular>
+				<casa></casa>
+			</pular>
+			<letra>
+				<value>O</value>
+				<value>P</value>
+				<value>T</value>
+				<value>R</value>
+				<value>A</value>
+			</letra>
+		</palavra>
+		<palavra name="palavra2">
+			<nome>PARTO</nome>
+			<pontos>-1.5</pontos>
+			<inicio>1.5</inicio>
+			<vertical>N</vertical>
+			<pular>
+				<casa></casa>
+			</pular>
+		</palavra>
+		<palavra name="palavra3">
+			<nome>TRAPO</nome>
+			<pontos>-0.5</pontos>
+			<inicio>0</inicio>
+			<vertical>N</vertical>
+			<pular>
+				<casa></casa>
+			</pular>
+		</palavra>
+		<palavra name="palavra4">
+			<nome>PRATO</nome>
+			<inicio>1.5</inicio>
+			<pontos>2</pontos>
+			<vertical>S</vertical>
+			<pular>
+				<casa></casa>
+			</pular>
+		</palavra>
+		<palavra name="palavra5">
+			<nome>RAPTO</nome>
+			<inicio>-0.5</inicio>
+			<pontos>1.5</pontos>
+			<vertical>S</vertical>
+			<pular>
+				<casa></casa>
+			</pular>
+		</palavra>
+		<palavra name="palavra6">
+			<nome>TOPAR</nome>
+			<inicio>-1.5</inicio>
+			<pontos>2.5</pontos>
+			<vertical>S</vertical>
+			<pular>
+				<casa></casa>
+			</pular>
+		</palavra>
+	</palavras>
