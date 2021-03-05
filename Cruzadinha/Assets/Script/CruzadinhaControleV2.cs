@@ -408,5 +408,8 @@ List<string> ListaLetrasControle = null;
         SceneManager.LoadScene("Fase1");
 
     }
+    public void btnMenu() {
+        SceneManager.LoadScene("FaseSelect");
+    }
 }
 

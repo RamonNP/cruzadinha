@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<palavras>
+		<palavra name="palavra1">
+			<nome>RIFA</nome>
+			<inicio>0</inicio>
+			<pontos>1</pontos>
+			<vertical>S</vertical>
+			<pular>
+				<casa></casa>
+			</pular>
+			<letra>
+				<value>R</value>
+				<value>F</value>
+				<value>I</value>
+				<value>A</value>
+				<value>E</value>
+			</letra>
+		</palavra>
+		<palavra name="palavra2">
+			<nome>FERA</nome>
+			<pontos>-1</pontos>
+			<inicio>1</inicio>
+			<vertical>N</vertical>
+			<pular>
+				<casa></casa>
+			</pular>
+		</palavra>
+		<palavra name="palavra3">
+			<nome>FEIA</nome>
+			<pontos>0</pontos>
+			<inicio>0</inicio>
+			<vertical>N</vertical>
+			<pular>
+				<casa></casa>
+			</pular>
+		</palavra>
+		<palavra name="palavra4">
+			<nome>FREIA</nome>
+			<inicio>1.5</inicio>
+			<pontos>2</pontos>
+			<vertical>S</vertical>
+			<pular>
+				<casa></casa>
+			</pular>
+		</palavra>
+		<palavra name="palavra5">
+			<nome>FREI</nome>
+			<inicio>-1</inicio>
+			<pontos>1</pontos>
+			<vertical>S</vertical>
+			<pular>
+				<casa></casa>
+			</pular>
+		</palavra>
+		<palavra name="palavra6">
+			<nome>FEIRA</nome>
+			<pontos>-2</pontos>
+			<inicio>-0.5</inicio>
+			<vertical>N</vertical>
+			<pular>
+				<casa></casa>
+			</pular>
+		</palavra>
+	</palavras>

@@ -1,14 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//using GoogleMobileAds.Api;
+using GoogleMobileAds.Api;
 using System;
 
 public class AdMobController : MonoBehaviour
 {
-    /*
+    
     public int qtdMorte;
-    private Player player; 
+    //private Player player; 
     private RewardedAd rewardedAd;
     private BannerView bannerView;
     public static AdMobController instance;
@@ -28,7 +28,7 @@ public class AdMobController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindObjectOfType<Player>();
+        //player = GameObject.FindObjectOfType<Player>();
         // Initialize the Google Mobile Ads SDK.
         MobileAds.Initialize(initStatus => { });
         RequestInterstitial();
@@ -115,7 +115,7 @@ public class AdMobController : MonoBehaviour
     {
         string type = args.Type;
         double amount = args.Amount;
-        player.CallBackmoreArrows((int)amount);
+        //player.CallBackmoreArrows((int)amount);
         MonoBehaviour.print(
             "HandleRewardedAdRewarded event received for "
                         + amount.ToString() + " " + type);
@@ -139,6 +139,6 @@ public class AdMobController : MonoBehaviour
         AdRequest request = new AdRequest.Builder().Build();
         // Load the interstitial with the request.
         this.interstitial.LoadAd(request);
-    } */
+    } 
 
 }

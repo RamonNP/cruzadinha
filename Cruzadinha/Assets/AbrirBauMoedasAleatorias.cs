@@ -5,7 +5,7 @@ using UnityEngine;
 public class AbrirBauMoedasAleatorias : MonoBehaviour
 {
     public TMPro.TMP_Text m_textMeshPro;
-    private const string label = "{0}x";
+    private const string label = "{00000}x";
     private float m_frame;
     public int _qtdMoedaMax;
     // Start is called before the first frame update
@@ -21,10 +21,10 @@ public class AbrirBauMoedasAleatorias : MonoBehaviour
     void Update()
     {
         if(_qtdMoedaMax > m_frame){
-            m_textMeshPro.SetText(label, (int)m_frame);
+            m_textMeshPro.SetText(label.PadLeft(6, '0'), (int)m_frame);
             m_frame += 1;// * Time.deltaTime;
         } else {
-             m_textMeshPro.SetText(label, (int)_qtdMoedaMax);
+             m_textMeshPro.SetText(label.PadLeft(6, '0'), (int)_qtdMoedaMax);
         }
     }
     public void GerarMoedasRandom(){
