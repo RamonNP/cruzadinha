@@ -28,6 +28,7 @@ public class GameController : GameControllerBase
     // Start is called before the first frame update
     void Start()
     {
+        AdMobController.getInstance().RequestBanner();
         audioController = FindObjectOfType(typeof(AudioControllerV2)) as AudioControllerV2;
         right = 0;
         error = 0;

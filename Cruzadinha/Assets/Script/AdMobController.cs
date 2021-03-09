@@ -67,7 +67,8 @@ public class AdMobController : MonoBehaviour
     }
     public void RequestBanner()
     {
-        string adUnitId = "ca-app-pub-2409485950941966/3383585314";
+        //string adUnitId = "ca-app-pub-2409485950941966/1096083304";//PROD
+        string adUnitId = "ca-app-pub-3940256099942544/6300978111";//DEV
         //string adUnitId = "ca-app-pub-3940256099942544/5224354917";//Teste
 
         // Create a 320x50 banner at the top of the screen.
@@ -123,14 +124,15 @@ public class AdMobController : MonoBehaviour
 
     public void ShowInterstitial() {
         qtdMorte++;
-        if (this.interstitial.IsLoaded() && qtdMorte >= 2) {
+        if (this.interstitial.IsLoaded() && qtdMorte >= 1) {
             qtdMorte = 0;
             this.interstitial.Show();
         }
     }
     private void RequestInterstitial()
     {
-        string adUnitId = "ca-app-pub-2409485950941966/8811165646";
+        //string adUnitId = "ca-app-pub-2409485950941966/2026021595";//PROD
+        string adUnitId = "	ca-app-pub-3940256099942544/1033173712";//DEV
 
         // Initialize an InterstitialAd.
         this.interstitial = new InterstitialAd(adUnitId);

@@ -399,6 +399,7 @@ List<string> ListaLetrasControle = null;
         }
         faseAtual +=1;
         AppDao.getInstance().saveInt("Fase"+faseAtual,1);
+        AdMobController.getInstance().ShowInterstitial();
         //GameObject.Find("Refresh").SetActive(false);
     }
 

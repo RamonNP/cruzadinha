@@ -1379,7 +1379,6 @@ GameObject:
   - component: {fileID: 247311981}
   - component: {fileID: 247311980}
   - component: {fileID: 247311979}
-  - component: {fileID: 247311978}
   m_Layer: 0
   m_Name: "\xC7"
   m_TagString: Letras
@@ -1401,18 +1400,6 @@ Transform:
   m_Father: {fileID: 1127786267}
   m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &247311978
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 247311976}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41158a5db733fad4ea889068e3c1acc2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &247311979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7646,6 +7633,7 @@ MonoBehaviour:
   ShakeAmplitude: 3.2
   ShakeFrequency: 3
   ShakeElapsedTime: 0
+  ternimouFase: 0
   _letraDica: 0
   _qtdMoedasDicas: 70
 --- !u!4 &1108192929
