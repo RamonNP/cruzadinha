@@ -112,7 +112,15 @@ public class LinhaCOntrole : MonoBehaviour
         if(!ternimouFase){
             Touch touch = simulatess();
             if (Application.platform == RuntimePlatform.Android) {
-                touch = Input.GetTouch(0);//simulatess();//Input.GetTouch(0); SEM SIMULADOR
+                try
+                {
+                    touch = Input.GetTouch(0);//simulatess();//Input.GetTouch(0); SEM SIMULADOR
+                }
+                catch (System.Exception)
+                {
+                    
+                    //throw;
+                }
             } else if (Application.platform == RuntimePlatform.OSXEditor) {
                 Input.GetTouch(0); 
             }
