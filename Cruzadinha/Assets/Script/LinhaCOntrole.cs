@@ -53,6 +53,7 @@ public class LinhaCOntrole : MonoBehaviour
     
     void Start()
     {
+        AdMobController.getInstance().RequestBanner();
         //colisor = GameObject.Find("colisorLetras");
         LineRenderer lineRenderer = gameObject.AddComponent<LineRenderer>();
         lineRenderer.material = new Material(Shader.Find("Sprites/Default"));

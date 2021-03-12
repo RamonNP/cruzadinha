@@ -77,7 +77,7 @@ public class AdMobController : MonoBehaviour
         AdRequest request = new AdRequest.Builder().Build();
         // Load the banner with the request.
         bannerView.LoadAd(request);
-        Invoke("DestroyBanner", 30f);
+        //Invoke("DestroyBanner", 120f);
     }
     void DestroyBanner()
     {
